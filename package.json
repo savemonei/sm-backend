@@ -1,0 +1,33 @@
+{
+  "name": "savemonei-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Savemonei (auth, AI, sync)",
+  "main": "dist/index.js",
+  "packageManager": "pnpm@9.14.2",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "vercel-build": "pnpm run build",
+    "test:api": "node scripts/test-api.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "openai": "^4.77.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/express-serve-static-core": "^4.19.0",
+    "@types/node": "^22.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
