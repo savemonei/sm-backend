@@ -1,0 +1,44 @@
+[
+  {
+    "title": "What is SIP?",
+    "keywords": ["sip", "mutual fund", "systematic investment", "invest"],
+    "content": "A Systematic Investment Plan (SIP) lets you invest a fixed amount in a mutual fund at regular intervals, often monthly. It averages purchase cost over time and builds the habit of investing without needing a large lump sum.",
+    "examples": ["Invest ₹5,000 every month in an index fund.", "Increase SIP amount when income grows."],
+    "learnMore": "Track investment accounts in SaveMonei and set a savings goal for your SIP target."
+  },
+  {
+    "title": "What is EMI?",
+    "keywords": ["emi", "loan", "equated monthly installment", "repayment"],
+    "content": "EMI (Equated Monthly Installment) is a fixed payment you make each month toward a loan. Part goes to interest and part to principal. Over time the principal share usually rises as the balance falls.",
+    "examples": ["A home loan EMI of ₹25,000 for 20 years.", "A phone EMI for 12 months."],
+    "learnMore": "Add loans in SaveMonei to track remaining balance and payment progress."
+  },
+  {
+    "title": "Difference between Credit Card and Debit Card",
+    "keywords": ["credit card", "debit card", "difference", "card"],
+    "content": "A debit card spends money you already have in your bank account. A credit card borrows from the issuer up to a limit; you repay later, often with interest if you do not clear the bill in full. Credit cards can help build credit history but can increase debt if unpaid.",
+    "examples": ["Debit: groceries deducted from salary account immediately.", "Credit: travel booked now, paid on the statement due date."],
+    "learnMore": "In SaveMonei, keep credit cards as liability accounts so net worth stays accurate."
+  },
+  {
+    "title": "What is Net Worth?",
+    "keywords": ["net worth", "assets", "liabilities", "wealth"],
+    "content": "Net worth is what you own minus what you owe. Assets include cash, bank balances, and investments. Liabilities include loans, credit card dues, and other debts. Tracking net worth over time shows whether your overall financial position is improving.",
+    "examples": ["Assets ₹10L − Liabilities ₹3L = Net worth ₹7L."],
+    "learnMore": "Check Dashboard net worth after accounts and loans are up to date."
+  },
+  {
+    "title": "What is a budget?",
+    "keywords": ["budget", "spending plan", "limit"],
+    "content": "A budget is a plan for how much you intend to spend in categories over a period. It helps you notice overspending early and align spending with goals.",
+    "examples": ["₹8,000 monthly food budget.", "₹2,000 monthly entertainment budget."],
+    "learnMore": "Create category budgets in SaveMonei and ask the assistant how much budget remains."
+  },
+  {
+    "title": "What is cash flow?",
+    "keywords": ["cash flow", "income", "expense", "money in out"],
+    "content": "Cash flow is money coming in versus money going out over a period. Positive cash flow means you earned more than you spent. Watching upcoming bills helps avoid shortfalls.",
+    "examples": ["Salary in, rent and EMIs out.", "Freelance income with irregular expense spikes."],
+    "learnMore": "Use Reports and upcoming bills on the Dashboard to understand near-term cash flow."
+  }
+]

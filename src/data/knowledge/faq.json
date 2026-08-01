@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Where is my data stored?",
+    "keywords": ["privacy", "server", "cloud", "local", "storage"],
+    "answer": "Your financial data stays on your device in a local database. Optional backups go to your Google Drive only when you enable them. Knowledge help content can sync from SaveMonei servers, but your transactions do not."
+  },
+  {
+    "question": "How does backup work?",
+    "keywords": ["backup", "google drive", "auto backup"],
+    "answer": "From Settings → Backup you can create a backup or turn on auto-backup. Backups are stored in your Google Drive account so you can restore later."
+  },
+  {
+    "question": "How do I restore a backup?",
+    "keywords": ["restore", "recover", "restore backup"],
+    "answer": "Open Settings → Backup → Restore, pick a Drive or local backup, and confirm. Restoring replaces current local data, so back up first if you are unsure."
+  },
+  {
+    "question": "How does notification reading work?",
+    "keywords": ["notification", "sms", "auto detect", "permission"],
+    "answer": "With notification access enabled, SaveMonei can suggest transactions from bank or UPI alerts on your phone. Suggestions stay on-device until you confirm them."
+  },
+  {
+    "question": "How do subscriptions work?",
+    "keywords": ["subscription", "recurring", "renew"],
+    "answer": "Add recurring services in the Subscriptions tab with amount and frequency. The app totals monthly cost and can remind you before renewals."
+  },
+  {
+    "question": "How do I create a goal?",
+    "keywords": ["goal", "savings", "create goal"],
+    "answer": "Open the Goals tab, tap Add, set a target amount and optional date, then contribute toward it over time."
+  },
+  {
+    "question": "Does SaveMonei upload my transactions to the cloud?",
+    "keywords": ["upload", "cloud", "sync transactions", "privacy"],
+    "answer": "No. Transactions stay local. Backend services handle account auth, profile, helpers, and non-personal knowledge content—not your ledger."
+  },
+  {
+    "question": "How do I export my data?",
+    "keywords": ["export", "csv", "download"],
+    "answer": "Open Settings and use Export to create a file you can save or share."
+  },
+  {
+    "question": "What permissions does the app need?",
+    "keywords": ["permission", "camera", "notification access"],
+    "answer": "Camera is for receipts. Notification access is optional for auto-detection. Drive/storage access is for backups and exports. You can deny optional permissions and still use core features."
+  },
+  {
+    "question": "How is net worth calculated?",
+    "keywords": ["net worth", "assets", "liabilities"],
+    "answer": "Net worth is assets minus liabilities across accounts included in the calculation. Credit cards and loans count as liabilities."
+  }
+]

@@ -8,6 +8,7 @@ import profileRoutes from "./routes/profile";
 import syncRoutes from "./routes/sync";
 import subscriptionPricesRoutes from "./routes/subscription-prices";
 import importRoutes from "./routes/import";
+import knowledgeRoutes from "./routes/knowledge";
 
 const app = express();
 
@@ -25,5 +26,6 @@ app.use("/profile", profileRoutes);
 app.use("/sync", syncRoutes);
 app.use("/subscription-prices", subscriptionPricesRoutes);
 app.use("/import", importRoutes);
+app.use("/knowledge", knowledgeRoutes);
 
 export default app;

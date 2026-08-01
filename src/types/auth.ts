@@ -36,6 +36,16 @@ export interface AuthSuccessResponse {
   session: AuthTokens;
 }
 
+export interface AuthPendingConfirmationResponse {
+  user: UserInfo;
+  emailConfirmationRequired: true;
+  message: string;
+}
+
+export type RegisterResponse =
+  | AuthSuccessResponse
+  | AuthPendingConfirmationResponse;
+
 export interface AuthErrorResponse {
   error: {
     code: string;

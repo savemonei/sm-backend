@@ -1,0 +1,202 @@
+[
+  {
+    "id": "subscriptions",
+    "title": "Subscriptions",
+    "keywords": ["subscription", "netflix", "renew", "recurring", "spotify", "membership"],
+    "description": "Track recurring payments and see your monthly subscription total.",
+    "steps": [
+      "Open the Subscriptions tab",
+      "Tap Add",
+      "Enter name, amount, and billing frequency",
+      "Optionally enable reminders"
+    ],
+    "tips": ["Enable reminders so renewals do not surprise you.", "Use reports to see subscription spend over time."],
+    "related": ["budgets", "recurring-transactions", "backup"]
+  },
+  {
+    "id": "budgets",
+    "title": "Budgets",
+    "keywords": ["budget", "limit", "spending cap", "category budget"],
+    "description": "Set spending limits by category and track how much is left.",
+    "steps": [
+      "Open Reports or Dashboard budget section",
+      "Create a budget for a category",
+      "Choose period (weekly, monthly, or yearly)",
+      "Watch remaining amount update as you spend"
+    ],
+    "tips": ["Start with your top spending categories.", "Review budgets at the start of each month."],
+    "related": ["subscriptions", "goals", "reports"]
+  },
+  {
+    "id": "goals",
+    "title": "Goals",
+    "keywords": ["goal", "savings", "target", "save for"],
+    "description": "Create savings goals and track progress toward a target amount.",
+    "steps": [
+      "Open the Goals tab",
+      "Tap Add",
+      "Set target amount and optional deadline",
+      "Link contributions from transactions or add manually"
+    ],
+    "tips": ["Small regular contributions beat occasional large ones."],
+    "related": ["budgets", "net-worth"]
+  },
+  {
+    "id": "backup",
+    "title": "Backup",
+    "keywords": ["backup", "restore", "google drive", "export", "cloud backup"],
+    "description": "Back up your local data so you can restore it later.",
+    "steps": [
+      "Open Settings",
+      "Go to Backup",
+      "Connect Google Drive if needed",
+      "Create a backup or enable auto-backup"
+    ],
+    "tips": ["Run a backup before switching phones.", "Keep auto-backup on if you want hands-free protection."],
+    "related": ["restore", "privacy", "export"]
+  },
+  {
+    "id": "restore",
+    "title": "Restore backup",
+    "keywords": ["restore", "recover", "import backup", "restore backup"],
+    "description": "Restore your finances from a previous backup file.",
+    "steps": [
+      "Open Settings → Backup",
+      "Choose Restore",
+      "Select a backup from Google Drive or a local file",
+      "Confirm restore and wait for completion"
+    ],
+    "tips": ["Restoring may replace current local data. Back up first if unsure."],
+    "related": ["backup", "privacy"]
+  },
+  {
+    "id": "privacy",
+    "title": "Where your data is stored",
+    "keywords": ["privacy", "server", "cloud", "local", "data stored", "security"],
+    "description": "Your financial data stays on your device. Backend is used for auth, profile, sync helpers, and knowledge content—not your transactions.",
+    "steps": [
+      "Add accounts and transactions in the app",
+      "Data is saved in the on-device database",
+      "Optional backups go to your Google Drive when you enable them"
+    ],
+    "tips": ["You control backups. Clear app data removes local finances."],
+    "related": ["backup", "notification-reading", "permissions"]
+  },
+  {
+    "id": "notification-reading",
+    "title": "Notification reading",
+    "keywords": ["notification", "sms", "detect", "auto detect", "permission", "bank alert"],
+    "description": "SaveMonei can read bank or UPI notifications on your device to suggest pending transactions.",
+    "steps": [
+      "Open Settings → Auto detection / Notifications",
+      "Grant notification access when prompted",
+      "Confirm or edit suggested transactions from the dashboard"
+    ],
+    "tips": ["Processing happens on your device.", "You always confirm before a transaction is saved."],
+    "related": ["privacy", "permissions", "transactions"]
+  },
+  {
+    "id": "permissions",
+    "title": "Permissions",
+    "keywords": ["permission", "access", "camera", "notification access", "storage"],
+    "description": "Camera is used for receipts; notification access is optional for auto-detection; storage/Drive for backups.",
+    "steps": [
+      "Grant only the permissions you need",
+      "Change them anytime in system Settings → Apps → SaveMonei"
+    ],
+    "tips": ["You can use the app without notification reading."],
+    "related": ["notification-reading", "backup", "privacy"]
+  },
+  {
+    "id": "reports",
+    "title": "Reports",
+    "keywords": ["report", "analytics", "spending report", "charts"],
+    "description": "See income, expenses, and category breakdowns for any date range.",
+    "steps": [
+      "Open the Reports tab",
+      "Pick a date range or preset",
+      "Explore categories, accounts, and trends"
+    ],
+    "tips": ["Compare this month vs last month to spot changes early."],
+    "related": ["budgets", "subscriptions"]
+  },
+  {
+    "id": "net-worth",
+    "title": "Net worth",
+    "keywords": ["net worth", "assets", "liabilities", "balance"],
+    "description": "Net worth is your assets minus liabilities across accounts included in the calculation.",
+    "steps": [
+      "Add accounts with balances",
+      "Mark liability accounts such as credit cards and loans correctly",
+      "Check net worth on the Dashboard"
+    ],
+    "tips": ["Exclude accounts from net worth in account settings if needed."],
+    "related": ["goals", "loans", "accounts"]
+  },
+  {
+    "id": "loans",
+    "title": "Loans",
+    "keywords": ["loan", "emi", "debt", "credit", "repayment"],
+    "description": "Track loan balances, EMIs, and payment progress.",
+    "steps": [
+      "Add a loan account or loan record",
+      "Enter principal, rate, and tenure if available",
+      "Record payments as you go"
+    ],
+    "tips": ["Ask the assistant for your loan balance anytime."],
+    "related": ["net-worth", "budgets"]
+  },
+  {
+    "id": "accounts",
+    "title": "Accounts",
+    "keywords": ["account", "bank", "wallet", "credit card", "cash"],
+    "description": "Accounts hold balances for banks, cash, cards, and other wallets.",
+    "steps": [
+      "Open Accounts",
+      "Tap Add",
+      "Choose type and starting balance",
+      "Use them when recording transactions"
+    ],
+    "tips": ["Keep credit cards as liability accounts for accurate net worth."],
+    "related": ["transactions", "net-worth", "transfer"]
+  },
+  {
+    "id": "transactions",
+    "title": "Transactions",
+    "keywords": ["transaction", "expense", "income", "add transaction"],
+    "description": "Record income, expenses, and transfers against your accounts.",
+    "steps": [
+      "Tap Add on Transactions (or use the camera for a receipt)",
+      "Choose type, amount, category, and account",
+      "Save"
+    ],
+    "tips": ["Add a note or merchant to make search and reports clearer."],
+    "related": ["accounts", "budgets", "reports"]
+  },
+  {
+    "id": "export",
+    "title": "Export",
+    "keywords": ["export", "csv", "excel", "download data"],
+    "description": "Export your data for spreadsheets or personal records.",
+    "steps": [
+      "Open Settings",
+      "Choose Export",
+      "Pick the format and share or save the file"
+    ],
+    "tips": ["Export regularly if you keep offline archives."],
+    "related": ["backup", "privacy"]
+  },
+  {
+    "id": "recurring-transactions",
+    "title": "Recurring transactions",
+    "keywords": ["recurring", "repeat", "scheduled", "automatic"],
+    "description": "Set up repeating income or expenses so upcoming bills stay visible.",
+    "steps": [
+      "Create a recurring transaction or subscription",
+      "Choose frequency and next date",
+      "Review upcoming items on the Dashboard"
+    ],
+    "tips": ["Recurring items power upcoming bills and cash-flow hints."],
+    "related": ["subscriptions", "budgets"]
+  }
+]

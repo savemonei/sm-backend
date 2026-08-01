@@ -8,7 +8,12 @@ Backend API for Savemonei: auth (via Supabase), AI, and sync. App talks only to 
 1. Copy `.env.example` to `.env` and set:
    - `SUPABASE_URL` – your Supabase project URL
    - `SUPABASE_ANON_KEY` – your Supabase anon (public) key
+   - `AUTH_REDIRECT_URL` – email confirmation page, e.g. `https://savemonei-backend.vercel.app/auth/verified`
    - `PORT` (optional, default 4000)
+
+   In Supabase Dashboard -> Authentication -> URL Configuration, add the same
+   `AUTH_REDIRECT_URL` to Redirect URLs. Without this, Supabase may redirect
+   verification links to the project Site URL, often `localhost`.
 
 2. Install and run:
 
@@ -28,7 +33,7 @@ Base URL: `http://localhost:4000` (or your `PORT`).
 
 | Method | Path | Body | Description |
 |--------|------|------|-------------|
-| POST | `/auth/register` | `{ email, password, fullName }` | Register; returns `{ user, session }` with `access_token`, `refresh_token`, `expires_in`. |
+| POST | `/auth/register` | `{ email, password, fullName }` | Register; returns `{ user, session }` when email confirmation is off, or `202` with `emailConfirmationRequired` when confirmation is required. |
 | POST | `/auth/login` | `{ email, password }` | Login; same response shape. |
 | POST | `/auth/refresh` | `{ refresh_token }` | New access + refresh tokens. |
 | POST | `/auth/logout` | (optional) | 200 OK; client discards tokens. |
@@ -53,6 +58,16 @@ Base URL: `http://localhost:4000` (or your `PORT`).
 }
 ```
 
+**Email confirmation response:**
+
+```json
+{
+  "user": { "id": "...", "email": "...", "full_name": "..." },
+  "emailConfirmationRequired": true,
+  "message": "Confirm your email, then sign in to start using Savemonei."
+}
+```
+
 **Error shape:** `{ "error": { "code": "...", "message": "..." } }`
 
 ## Scripts
@@ -66,7 +81,7 @@ Base URL: `http://localhost:4000` (or your `PORT`).
 1. **Install pnpm** (if needed): `corepack enable && corepack prepare pnpm@latest --activate`
 2. **Lockfile**: Run `pnpm install` so `pnpm-lock.yaml` and `@types/express-serve-static-core` are up to date (needed for build).
 3. **Connect repo** to Vercel; root directory = this project.
-4. **Environment variables** in Vercel: set `SUPABASE_URL` and `SUPABASE_ANON_KEY`.
+4. **Environment variables** in Vercel: set `SUPABASE_URL`, `SUPABASE_ANON_KEY`, and `AUTH_REDIRECT_URL`.
 5. **Deploy**: Vercel runs `pnpm install`, then `pnpm run build` (from `vercel.json`), then deploys the serverless function from `api/index.ts`.
 
 After deploy, API base URL is `https://<your-project>.vercel.app` (e.g. `GET .../health`, `POST .../auth/login`).
