@@ -48,5 +48,45 @@
     "question": "How is net worth calculated?",
     "keywords": ["net worth", "assets", "liabilities"],
     "answer": "Net worth is assets minus liabilities across accounts included in the calculation. Credit cards and loans count as liabilities."
+  },
+  {
+    "question": "Balance is incorrect",
+    "keywords": ["balance incorrect", "wrong balance", "balance wrong", "incorrect balance"],
+    "answer": "Check the account opening balance, look for missing transfers or duplicates, and confirm the account is included in totals. Ask SaveMonei to run a data quality check for more clues."
+  },
+  {
+    "question": "Transfer missing",
+    "keywords": ["transfer missing", "missing transfer", "transfer not showing"],
+    "answer": "Filter Transactions to Transfer type and confirm both accounts are active. If it was saved as expense/income by mistake, edit or re-add it as a transfer."
+  },
+  {
+    "question": "Backup failed",
+    "keywords": ["backup failed", "backup error", "restore failed"],
+    "answer": "Retry from Settings → Backup, confirm cloud sign-in and free storage, and try a local backup if cloud fails."
+  },
+  {
+    "question": "Notification reading stopped",
+    "keywords": ["notification reading stopped", "notifications stopped", "sms reading stopped"],
+    "answer": "Re-enable notification access in Settings, exclude SaveMonei from battery optimizations, and review the pending notifications list."
+  },
+  {
+    "question": "Recurring transaction missing",
+    "keywords": ["recurring missing", "recurring transaction missing", "subscription not generated"],
+    "answer": "Open Subscriptions and check status, next date, and end date. Paused or cancelled items will not generate new transactions."
+  },
+  {
+    "question": "How is account balance calculated?",
+    "keywords": ["balance calculated", "opening balance", "account balance"],
+    "answer": "Balances start from the account opening balance, then add income and subtract expenses and transfers. Ask about opening balance if totals look off."
+  },
+  {
+    "question": "What is opening balance?",
+    "keywords": ["opening balance", "starting balance"],
+    "answer": "Opening balance is the amount already in an account when you first add it. It anchors every calculated balance afterward."
+  },
+  {
+    "question": "Difference between cash and bank account?",
+    "keywords": ["cash vs bank", "difference cash bank", "cash and bank"],
+    "answer": "Cash tracks physical money you hold. Bank tracks balances at a financial institution. Both are assets; transfers move money between them without counting as income or expense."
   }
 ]
