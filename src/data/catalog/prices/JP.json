@@ -1,0 +1,342 @@
+{
+  "region": "JP",
+  "currency": "JPY",
+  "currencySymbol": "¥",
+  "services": [
+    {
+      "id": "2ab9f544-74cd-4e16-b56d-5614c76151e5",
+      "slug": "netflix",
+      "name": "Netflix",
+      "icon": "🎬",
+      "iconType": "mci",
+      "iconName": "netflix",
+      "color": "#E50914",
+      "category": "streaming",
+      "websiteUrl": "https://netflix.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "bde216b8-c8ce-4de9-bb7c-fcaab003386a",
+          "name": "Standard with Ads",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 890,
+          "currency": "JPY"
+        },
+        {
+          "id": "5d0f4ae8-ba23-4101-b544-802d3254a5b0",
+          "name": "Standard",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 1590,
+          "currency": "JPY"
+        },
+        {
+          "id": "b4b0ea92-08b8-4d61-ad8a-2661f6f6fbff",
+          "name": "Premium",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 1980,
+          "currency": "JPY"
+        }
+      ],
+      "popularityRank": 1,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "9b2c05a4-5886-4477-a077-4051bf5c6284",
+      "slug": "disney",
+      "name": "Disney+",
+      "icon": "🏰",
+      "iconType": "emoji",
+      "iconName": "disney-plus",
+      "color": "#113CCF",
+      "category": "streaming",
+      "websiteUrl": "https://disneyplus.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "d4ba77e3-8bd5-447e-aeb1-d0b1c3a3f3be",
+          "name": "Standard",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 1250,
+          "currency": "JPY"
+        },
+        {
+          "id": "1e5868b2-4164-4880-a099-b14b1ac51594",
+          "name": "Premium",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 1670,
+          "currency": "JPY"
+        }
+      ],
+      "popularityRank": 2,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "5259600f-b6dc-4102-a7b6-c58a29922f03",
+      "slug": "abema",
+      "name": "ABEMA",
+      "icon": "🟢",
+      "iconType": "emoji",
+      "iconName": "television",
+      "color": "#00C300",
+      "category": "streaming",
+      "websiteUrl": "https://abema.tv",
+      "isGlobal": false,
+      "plans": [
+        {
+          "id": "08b8fcc7-2287-4fef-96da-e1c05d872008",
+          "name": "Premium with Ads",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 14,
+          "price": 680,
+          "currency": "JPY"
+        },
+        {
+          "id": "cedb4cd6-ed0f-403f-83ec-5cb686be64ae",
+          "name": "Premium",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 14,
+          "price": 1180,
+          "currency": "JPY"
+        }
+      ],
+      "popularityRank": 3,
+      "isRegional": true,
+      "localName": null
+    },
+    {
+      "id": "a04dd529-5b5a-4853-9a70-bd409a8cc6e6",
+      "slug": "u-next",
+      "name": "U-NEXT",
+      "icon": "⬛",
+      "iconType": "emoji",
+      "iconName": "play-box",
+      "color": "#1A1A1A",
+      "category": "streaming",
+      "websiteUrl": "https://video.unext.jp",
+      "isGlobal": false,
+      "plans": [
+        {
+          "id": "1977024c-2ae7-44a1-a5cc-7df0691787fc",
+          "name": "Standard",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 31,
+          "price": 2189,
+          "currency": "JPY"
+        }
+      ],
+      "popularityRank": 4,
+      "isRegional": true,
+      "localName": null
+    },
+    {
+      "id": "dbb97b93-2a67-4dc0-8d04-5f36d6bb6402",
+      "slug": "spotify",
+      "name": "Spotify",
+      "icon": "🎵",
+      "iconType": "fa5",
+      "iconName": "spotify",
+      "color": "#1DB954",
+      "category": "music",
+      "websiteUrl": "https://spotify.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "7bdb91fa-a47f-4c77-bcfa-8058c40967ab",
+          "name": "Individual",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 30,
+          "price": 1080,
+          "currency": "JPY"
+        },
+        {
+          "id": "82afb264-00c9-44cd-a719-893def8e5f1d",
+          "name": "Student",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 540,
+          "currency": "JPY"
+        },
+        {
+          "id": "a110a707-c6ec-4bd3-9f35-db3d97f89878",
+          "name": "Duo",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 1480,
+          "currency": "JPY"
+        },
+        {
+          "id": "1a36de00-7fad-48cd-92de-3a81d40cd979",
+          "name": "Family",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 1880,
+          "currency": "JPY"
+        }
+      ],
+      "popularityRank": 5,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "fbb442b5-17db-4bd4-98ae-027ecbfd9c27",
+      "slug": "amazon-prime",
+      "name": "Amazon Prime",
+      "icon": "📦",
+      "iconType": "fa5",
+      "iconName": "amazon",
+      "color": "#FF9900",
+      "category": "shopping",
+      "websiteUrl": "https://amazon.com/prime",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "a0ac581c-eaf3-48d9-a0c7-fb8f1e890edc",
+          "name": "Monthly",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 30,
+          "price": 600,
+          "currency": "JPY"
+        },
+        {
+          "id": "6305f2ff-da39-4555-a78f-91e2ccfccfc4",
+          "name": "Yearly",
+          "billingCycle": "yearly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 5900,
+          "currency": "JPY"
+        }
+      ],
+      "popularityRank": 6,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "dee97bc1-1a7e-42d3-ad69-75f560749855",
+      "slug": "youtube-premium",
+      "name": "YouTube Premium",
+      "icon": "▶️",
+      "iconType": "fa5",
+      "iconName": "youtube",
+      "color": "#FF0000",
+      "category": "streaming",
+      "websiteUrl": "https://youtube.com/premium",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "b03f094c-02e3-4f0c-83f5-6af5d01e0d6f",
+          "name": "Individual",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 30,
+          "price": 1280,
+          "currency": "JPY"
+        },
+        {
+          "id": "aa05c4d5-57b2-4d3d-8eeb-500abc69f12f",
+          "name": "Family",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 2180,
+          "currency": "JPY"
+        }
+      ],
+      "popularityRank": 7,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "ca9d242b-4526-4722-9b44-7394cd5c63cd",
+      "slug": "apple-music",
+      "name": "Apple Music",
+      "icon": "🎶",
+      "iconType": "fa5",
+      "iconName": "itunes-note",
+      "color": "#FC3C44",
+      "category": "music",
+      "websiteUrl": "https://music.apple.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "4fd14138-1667-485d-976d-5224e32c4f6f",
+          "name": "Student",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 580,
+          "currency": "JPY"
+        },
+        {
+          "id": "5ca23f71-34ef-488b-b4b8-c7be7ba8fbe6",
+          "name": "Individual",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 30,
+          "price": 1080,
+          "currency": "JPY"
+        },
+        {
+          "id": "0a086054-85c9-4e17-9cd8-de613e2b175f",
+          "name": "Family",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 1680,
+          "currency": "JPY"
+        }
+      ],
+      "popularityRank": 8,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "d19a1a04-37b0-4d0b-aebb-a317b37cabfd",
+      "slug": "chatgpt",
+      "name": "ChatGPT Plus",
+      "icon": "🤖",
+      "iconType": "emoji",
+      "iconName": "robot",
+      "color": "#10A37F",
+      "category": "productivity",
+      "websiteUrl": "https://chat.openai.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "54b6f813-6414-473e-a746-62a79cff8dd1",
+          "name": "Plus",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 3000,
+          "currency": "JPY"
+        }
+      ],
+      "popularityRank": 9,
+      "isRegional": false,
+      "localName": null
+    }
+  ],
+  "lastUpdated": "2026-08-02T04:15:55.311Z",
+  "cacheVersion": 2
+}

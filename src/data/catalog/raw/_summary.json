@@ -1,0 +1,11 @@
+{
+  "dumpedAt": "2026-08-02T04:15:55.311Z",
+  "enriched": true,
+  "tables": {
+    "regions": 10,
+    "subscription_services": 27,
+    "service_availability": 97,
+    "subscription_plans": 70,
+    "subscription_prices": 250
+  }
+}

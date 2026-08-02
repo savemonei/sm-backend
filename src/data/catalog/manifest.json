@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "updatedAt": "2026-08-02T04:15:55.311Z",
+  "source": "catalog-enrich-2026-08-regions",
+  "regions": [
+    "US",
+    "IN",
+    "UK",
+    "DE",
+    "FR",
+    "CA",
+    "AU",
+    "JP",
+    "BR",
+    "MX"
+  ],
+  "notes": "Prices curated from public plan pages / press (Aug 2026). Verify before relying for billing."
+}

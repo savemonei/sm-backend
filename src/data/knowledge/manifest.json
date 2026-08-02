@@ -1,11 +1,11 @@
 {
-  "aiVersion": 1,
+  "aiVersion": 2,
   "minAiVersion": 1,
-  "maxAiVersion": 1,
-  "version": 1,
+  "maxAiVersion": 2,
+  "version": 2,
   "files": [
     { "name": "features", "version": 1 },
-    { "name": "faq", "version": 1 },
+    { "name": "faq", "version": 3 },
     { "name": "guides", "version": 1 }
   ]
 }

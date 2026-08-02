@@ -7,6 +7,7 @@ import aiRoutes from "./routes/ai";
 import profileRoutes from "./routes/profile";
 import syncRoutes from "./routes/sync";
 import subscriptionPricesRoutes from "./routes/subscription-prices";
+import goalTemplatesRoutes from "./routes/goal-templates";
 import importRoutes from "./routes/import";
 import knowledgeRoutes from "./routes/knowledge";
 
@@ -25,6 +26,7 @@ app.use("/ai", aiRoutes);
 app.use("/profile", profileRoutes);
 app.use("/sync", syncRoutes);
 app.use("/subscription-prices", subscriptionPricesRoutes);
+app.use("/goal-templates", goalTemplatesRoutes);
 app.use("/import", importRoutes);
 app.use("/knowledge", knowledgeRoutes);
 

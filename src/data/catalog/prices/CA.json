@@ -1,0 +1,351 @@
+{
+  "region": "CA",
+  "currency": "CAD",
+  "currencySymbol": "C$",
+  "services": [
+    {
+      "id": "2ab9f544-74cd-4e16-b56d-5614c76151e5",
+      "slug": "netflix",
+      "name": "Netflix",
+      "icon": "🎬",
+      "iconType": "mci",
+      "iconName": "netflix",
+      "color": "#E50914",
+      "category": "streaming",
+      "websiteUrl": "https://netflix.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "bde216b8-c8ce-4de9-bb7c-fcaab003386a",
+          "name": "Standard with Ads",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 7.99,
+          "currency": "CAD"
+        },
+        {
+          "id": "5d0f4ae8-ba23-4101-b544-802d3254a5b0",
+          "name": "Standard",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 18.99,
+          "currency": "CAD"
+        },
+        {
+          "id": "b4b0ea92-08b8-4d61-ad8a-2661f6f6fbff",
+          "name": "Premium",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 23.99,
+          "currency": "CAD"
+        }
+      ],
+      "popularityRank": 1,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "dbb97b93-2a67-4dc0-8d04-5f36d6bb6402",
+      "slug": "spotify",
+      "name": "Spotify",
+      "icon": "🎵",
+      "iconType": "fa5",
+      "iconName": "spotify",
+      "color": "#1DB954",
+      "category": "music",
+      "websiteUrl": "https://spotify.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "7bdb91fa-a47f-4c77-bcfa-8058c40967ab",
+          "name": "Individual",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 30,
+          "price": 12.99,
+          "currency": "CAD"
+        },
+        {
+          "id": "82afb264-00c9-44cd-a719-893def8e5f1d",
+          "name": "Student",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 5.99,
+          "currency": "CAD"
+        },
+        {
+          "id": "a110a707-c6ec-4bd3-9f35-db3d97f89878",
+          "name": "Duo",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 16.99,
+          "currency": "CAD"
+        },
+        {
+          "id": "1a36de00-7fad-48cd-92de-3a81d40cd979",
+          "name": "Family",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 20.99,
+          "currency": "CAD"
+        }
+      ],
+      "popularityRank": 2,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "fbb442b5-17db-4bd4-98ae-027ecbfd9c27",
+      "slug": "amazon-prime",
+      "name": "Amazon Prime",
+      "icon": "📦",
+      "iconType": "fa5",
+      "iconName": "amazon",
+      "color": "#FF9900",
+      "category": "shopping",
+      "websiteUrl": "https://amazon.com/prime",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "a0ac581c-eaf3-48d9-a0c7-fb8f1e890edc",
+          "name": "Monthly",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 30,
+          "price": 9.99,
+          "currency": "CAD"
+        },
+        {
+          "id": "6305f2ff-da39-4555-a78f-91e2ccfccfc4",
+          "name": "Yearly",
+          "billingCycle": "yearly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 99,
+          "currency": "CAD"
+        }
+      ],
+      "popularityRank": 3,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "9b2c05a4-5886-4477-a077-4051bf5c6284",
+      "slug": "disney",
+      "name": "Disney+",
+      "icon": "🏰",
+      "iconType": "emoji",
+      "iconName": "disney-plus",
+      "color": "#113CCF",
+      "category": "streaming",
+      "websiteUrl": "https://disneyplus.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "40c7c7fb-6d26-403d-9f19-c8724b6e9ffd",
+          "name": "Standard with Ads",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 8.99,
+          "currency": "CAD"
+        },
+        {
+          "id": "d4ba77e3-8bd5-447e-aeb1-d0b1c3a3f3be",
+          "name": "Standard",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 15.99,
+          "currency": "CAD"
+        },
+        {
+          "id": "1e5868b2-4164-4880-a099-b14b1ac51594",
+          "name": "Premium",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 16.99,
+          "currency": "CAD"
+        }
+      ],
+      "popularityRank": 4,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "2c88434e-4659-479f-9f16-717b14631a42",
+      "slug": "crave",
+      "name": "Crave",
+      "icon": "🇨🇦",
+      "iconType": "emoji",
+      "iconName": "television-classic",
+      "color": "#E50914",
+      "category": "streaming",
+      "websiteUrl": "https://www.crave.ca",
+      "isGlobal": false,
+      "plans": [
+        {
+          "id": "0eb77e60-596b-446f-b5f1-ef914aaec360",
+          "name": "Standard with Ads",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 11.99,
+          "currency": "CAD"
+        },
+        {
+          "id": "2b9209ef-7f3e-47ea-8c6a-89835450928f",
+          "name": "Premium",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 22,
+          "currency": "CAD"
+        }
+      ],
+      "popularityRank": 5,
+      "isRegional": true,
+      "localName": null
+    },
+    {
+      "id": "dee97bc1-1a7e-42d3-ad69-75f560749855",
+      "slug": "youtube-premium",
+      "name": "YouTube Premium",
+      "icon": "▶️",
+      "iconType": "fa5",
+      "iconName": "youtube",
+      "color": "#FF0000",
+      "category": "streaming",
+      "websiteUrl": "https://youtube.com/premium",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "b03f094c-02e3-4f0c-83f5-6af5d01e0d6f",
+          "name": "Individual",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 30,
+          "price": 13.99,
+          "currency": "CAD"
+        },
+        {
+          "id": "aa05c4d5-57b2-4d3d-8eeb-500abc69f12f",
+          "name": "Family",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 21.99,
+          "currency": "CAD"
+        }
+      ],
+      "popularityRank": 6,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "ca9d242b-4526-4722-9b44-7394cd5c63cd",
+      "slug": "apple-music",
+      "name": "Apple Music",
+      "icon": "🎶",
+      "iconType": "fa5",
+      "iconName": "itunes-note",
+      "color": "#FC3C44",
+      "category": "music",
+      "websiteUrl": "https://music.apple.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "4fd14138-1667-485d-976d-5224e32c4f6f",
+          "name": "Student",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 5.99,
+          "currency": "CAD"
+        },
+        {
+          "id": "5ca23f71-34ef-488b-b4b8-c7be7ba8fbe6",
+          "name": "Individual",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 30,
+          "price": 11.99,
+          "currency": "CAD"
+        },
+        {
+          "id": "0a086054-85c9-4e17-9cd8-de613e2b175f",
+          "name": "Family",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 18.99,
+          "currency": "CAD"
+        }
+      ],
+      "popularityRank": 7,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "d19a1a04-37b0-4d0b-aebb-a317b37cabfd",
+      "slug": "chatgpt",
+      "name": "ChatGPT Plus",
+      "icon": "🤖",
+      "iconType": "emoji",
+      "iconName": "robot",
+      "color": "#10A37F",
+      "category": "productivity",
+      "websiteUrl": "https://chat.openai.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "54b6f813-6414-473e-a746-62a79cff8dd1",
+          "name": "Plus",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 26,
+          "currency": "CAD"
+        }
+      ],
+      "popularityRank": 8,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "1a2a68b6-b10f-47ef-ac8f-1d2ccaa2ae87",
+      "slug": "britbox",
+      "name": "BritBox",
+      "icon": "🇬🇧",
+      "iconType": "emoji",
+      "iconName": "television-box",
+      "color": "#DE1D34",
+      "category": "streaming",
+      "websiteUrl": "https://britbox.com",
+      "isGlobal": false,
+      "plans": [
+        {
+          "id": "29e7137e-b684-47e3-a84d-bf3d4509b905",
+          "name": "Standard",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 7,
+          "price": 8.99,
+          "currency": "CAD"
+        }
+      ],
+      "popularityRank": 9,
+      "isRegional": true,
+      "localName": null
+    }
+  ],
+  "lastUpdated": "2026-08-02T04:15:55.311Z",
+  "cacheVersion": 2
+}

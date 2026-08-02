@@ -1,0 +1,104 @@
+[
+  {
+    "code": "US",
+    "name": "United States",
+    "default_currency": "USD",
+    "currency_symbol": "$",
+    "locale_patterns": [
+      "en_US",
+      "en-US"
+    ]
+  },
+  {
+    "code": "IN",
+    "name": "India",
+    "default_currency": "INR",
+    "currency_symbol": "₹",
+    "locale_patterns": [
+      "en_IN",
+      "en-IN",
+      "hi_IN",
+      "hi-IN"
+    ]
+  },
+  {
+    "code": "UK",
+    "name": "United Kingdom",
+    "default_currency": "GBP",
+    "currency_symbol": "£",
+    "locale_patterns": [
+      "en_GB",
+      "en-GB"
+    ]
+  },
+  {
+    "code": "DE",
+    "name": "Germany",
+    "default_currency": "EUR",
+    "currency_symbol": "€",
+    "locale_patterns": [
+      "de_DE",
+      "de-DE"
+    ]
+  },
+  {
+    "code": "FR",
+    "name": "France",
+    "default_currency": "EUR",
+    "currency_symbol": "€",
+    "locale_patterns": [
+      "fr_FR",
+      "fr-FR"
+    ]
+  },
+  {
+    "code": "CA",
+    "name": "Canada",
+    "default_currency": "CAD",
+    "currency_symbol": "C$",
+    "locale_patterns": [
+      "en_CA",
+      "en-CA"
+    ]
+  },
+  {
+    "code": "AU",
+    "name": "Australia",
+    "default_currency": "AUD",
+    "currency_symbol": "A$",
+    "locale_patterns": [
+      "en_AU",
+      "en-AU"
+    ]
+  },
+  {
+    "code": "JP",
+    "name": "Japan",
+    "default_currency": "JPY",
+    "currency_symbol": "¥",
+    "locale_patterns": [
+      "ja_JP",
+      "ja-JP"
+    ]
+  },
+  {
+    "code": "BR",
+    "name": "Brazil",
+    "default_currency": "BRL",
+    "currency_symbol": "R$",
+    "locale_patterns": [
+      "pt_BR",
+      "pt-BR"
+    ]
+  },
+  {
+    "code": "MX",
+    "name": "Mexico",
+    "default_currency": "MXN",
+    "currency_symbol": "MX$",
+    "locale_patterns": [
+      "es_MX",
+      "es-MX"
+    ]
+  }
+]
