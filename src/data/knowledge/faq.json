@@ -88,5 +88,25 @@
     "question": "Difference between cash and bank account?",
     "keywords": ["cash vs bank", "difference cash bank", "cash and bank"],
     "answer": "Cash tracks physical money you hold. Bank tracks balances at a financial institution. Both are assets; transfers move money between them without counting as income or expense."
+  },
+  {
+    "question": "What can the assistant do?",
+    "keywords": ["what can you do", "assistant help", "capabilities", "how do you work"],
+    "answer": "Ask SaveMonei about spending, income, net worth, budgets, goals, and bills from your local data. You can also open screens, run quick actions like Add Expense or Backup, get app how-tos, and read finance guides. Answers stay on-device."
+  },
+  {
+    "question": "Is my data safe with the assistant?",
+    "keywords": ["data safe", "is my data safe", "assistant privacy", "secure"],
+    "answer": "Yes. The assistant reads your on-device ledger and local help content. It does not upload transactions or balances for AI. Optional backups only leave the device when you enable them."
+  },
+  {
+    "question": "How do I add an expense?",
+    "keywords": ["add expense", "how to add expense", "record expense", "log spending"],
+    "answer": "Use the + button on the dashboard, or ask the assistant “Add Expense” to open the form. You can also say “Add Income” or “Transfer Money”."
+  },
+  {
+    "question": "How do I create a budget?",
+    "keywords": ["create budget", "how to create budget", "set a budget", "make a budget"],
+    "answer": "Ask “Create Budget” or open Budgets from Transactions. Choose a category, set a monthly limit, and track progress as you spend."
   }
 ]

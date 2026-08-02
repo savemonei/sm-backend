@@ -1,0 +1,632 @@
+[
+  {
+    "id": "bde216b8-c8ce-4de9-bb7c-fcaab003386a",
+    "service_id": "2ab9f544-74cd-4e16-b56d-5614c76151e5",
+    "plan_name": "Standard with Ads",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "5afff06f-8963-4001-b410-5569ac0c7c05",
+    "service_id": "2ab9f544-74cd-4e16-b56d-5614c76151e5",
+    "plan_name": "Mobile",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "e8b42d48-1aef-4099-80bf-e066cecd399f",
+    "service_id": "2ab9f544-74cd-4e16-b56d-5614c76151e5",
+    "plan_name": "Basic",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "5d0f4ae8-ba23-4101-b544-802d3254a5b0",
+    "service_id": "2ab9f544-74cd-4e16-b56d-5614c76151e5",
+    "plan_name": "Standard",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "b4b0ea92-08b8-4d61-ad8a-2661f6f6fbff",
+    "service_id": "2ab9f544-74cd-4e16-b56d-5614c76151e5",
+    "plan_name": "Premium",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "7bdb91fa-a47f-4c77-bcfa-8058c40967ab",
+    "service_id": "dbb97b93-2a67-4dc0-8d04-5f36d6bb6402",
+    "plan_name": "Individual",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 30,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "82afb264-00c9-44cd-a719-893def8e5f1d",
+    "service_id": "dbb97b93-2a67-4dc0-8d04-5f36d6bb6402",
+    "plan_name": "Student",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 30,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "a110a707-c6ec-4bd3-9f35-db3d97f89878",
+    "service_id": "dbb97b93-2a67-4dc0-8d04-5f36d6bb6402",
+    "plan_name": "Duo",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 30,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "1a36de00-7fad-48cd-92de-3a81d40cd979",
+    "service_id": "dbb97b93-2a67-4dc0-8d04-5f36d6bb6402",
+    "plan_name": "Family",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 30,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "40c7c7fb-6d26-403d-9f19-c8724b6e9ffd",
+    "service_id": "9b2c05a4-5886-4477-a077-4051bf5c6284",
+    "plan_name": "Standard with Ads",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "d4ba77e3-8bd5-447e-aeb1-d0b1c3a3f3be",
+    "service_id": "9b2c05a4-5886-4477-a077-4051bf5c6284",
+    "plan_name": "Standard",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "1e5868b2-4164-4880-a099-b14b1ac51594",
+    "service_id": "9b2c05a4-5886-4477-a077-4051bf5c6284",
+    "plan_name": "Premium",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "ae3bac1a-9a3e-4503-bdf2-634d8d959f4e",
+    "service_id": "9b2c05a4-5886-4477-a077-4051bf5c6284",
+    "plan_name": "Mobile",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "a0ac581c-eaf3-48d9-a0c7-fb8f1e890edc",
+    "service_id": "fbb442b5-17db-4bd4-98ae-027ecbfd9c27",
+    "plan_name": "Monthly",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 30,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "6305f2ff-da39-4555-a78f-91e2ccfccfc4",
+    "service_id": "fbb442b5-17db-4bd4-98ae-027ecbfd9c27",
+    "plan_name": "Yearly",
+    "billing_cycle": "yearly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "c212a57f-82c8-43c2-89cf-8885d4adba57",
+    "service_id": "dee97bc1-1a7e-42d3-ad69-75f560749855",
+    "plan_name": "Lite",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 14,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "b03f094c-02e3-4f0c-83f5-6af5d01e0d6f",
+    "service_id": "dee97bc1-1a7e-42d3-ad69-75f560749855",
+    "plan_name": "Individual",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 30,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "aa05c4d5-57b2-4d3d-8eeb-500abc69f12f",
+    "service_id": "dee97bc1-1a7e-42d3-ad69-75f560749855",
+    "plan_name": "Family",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 30,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "14610c6d-7d94-42ed-924f-9800e483de5d",
+    "service_id": "dee97bc1-1a7e-42d3-ad69-75f560749855",
+    "plan_name": "Student",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 30,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "3b23d57a-2998-49b2-94f5-10b16b6924c8",
+    "service_id": "ca9d242b-4526-4722-9b44-7394cd5c63cd",
+    "plan_name": "Voice",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 30,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "4fd14138-1667-485d-976d-5224e32c4f6f",
+    "service_id": "ca9d242b-4526-4722-9b44-7394cd5c63cd",
+    "plan_name": "Student",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 30,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "5ca23f71-34ef-488b-b4b8-c7be7ba8fbe6",
+    "service_id": "ca9d242b-4526-4722-9b44-7394cd5c63cd",
+    "plan_name": "Individual",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 30,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "0a086054-85c9-4e17-9cd8-de613e2b175f",
+    "service_id": "ca9d242b-4526-4722-9b44-7394cd5c63cd",
+    "plan_name": "Family",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 30,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "54b6f813-6414-473e-a746-62a79cff8dd1",
+    "service_id": "d19a1a04-37b0-4d0b-aebb-a317b37cabfd",
+    "plan_name": "Plus",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "6c7fdebe-bfb3-407a-b82c-cb4afcf3c9fd",
+    "service_id": "d19a1a04-37b0-4d0b-aebb-a317b37cabfd",
+    "plan_name": "Pro",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "969a21ea-21e2-427c-ba56-788aff9457a8",
+    "service_id": "2ec2a6bf-0979-4e92-a680-7b336f0226d9",
+    "plan_name": "Mobile",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "c8bbf38c-37f1-4f10-824b-03174593b7bc",
+    "service_id": "2ec2a6bf-0979-4e92-a680-7b336f0226d9",
+    "plan_name": "Premium",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "1e2fe6c8-a0d7-467d-bbea-fe2176fd47f3",
+    "service_id": "2ec2a6bf-0979-4e92-a680-7b336f0226d9",
+    "plan_name": "Premium Lite",
+    "billing_cycle": "yearly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "cf3c4551-b411-403d-bbf7-d850dd4f2450",
+    "service_id": "4a0cfaa8-e692-4e6b-8d9b-5efd86d940ea",
+    "plan_name": "Premium",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "cb610b97-39a5-42d0-be39-e48d027cebea",
+    "service_id": "4a0cfaa8-e692-4e6b-8d9b-5efd86d940ea",
+    "plan_name": "Premium HD",
+    "billing_cycle": "yearly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "eb6c7253-5139-4076-a400-8ba8426ca764",
+    "service_id": "d106bfe5-b1c3-4923-946c-620cfcdb5086",
+    "plan_name": "One",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "e0e69927-af7c-40de-89ad-88a07bdc1768",
+    "service_id": "e7061937-63d4-4f01-af98-fd46f6297ced",
+    "plan_name": "Gold",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "25926bb4-2608-4b3b-bd6d-c5486de034dc",
+    "service_id": "b7d0a575-fd94-48f0-b7f4-d707f87f1651",
+    "plan_name": "With Ads",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 30,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "c5b1ed5f-a52f-4600-b15d-219387b8e4df",
+    "service_id": "b7d0a575-fd94-48f0-b7f4-d707f87f1651",
+    "plan_name": "No Ads",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 30,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "24bf9b37-fecf-424b-9b07-355668971327",
+    "service_id": "446171bc-7f0c-455f-904d-a4c0ab0fbb17",
+    "plan_name": "Premium",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 7,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "ba32e39d-7997-4de6-bb5a-ecfce9053d9c",
+    "service_id": "446171bc-7f0c-455f-904d-a4c0ab0fbb17",
+    "plan_name": "Premium Plus",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 7,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "0610dfb3-9986-4cdf-b86e-9b675f8a4f8b",
+    "service_id": "c29b6990-5d19-438e-a5c8-d2fb0600dba6",
+    "plan_name": "Entertainment",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 7,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "b3421949-00e2-45ac-b308-900eebad7cb7",
+    "service_id": "c29b6990-5d19-438e-a5c8-d2fb0600dba6",
+    "plan_name": "Cinema",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 7,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "803d8e92-22d8-462d-bc26-8f893f8d5415",
+    "service_id": "c29b6990-5d19-438e-a5c8-d2fb0600dba6",
+    "plan_name": "Sports",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 7,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "29e7137e-b684-47e3-a84d-bf3d4509b905",
+    "service_id": "1a2a68b6-b10f-47ef-ac8f-1d2ccaa2ae87",
+    "plan_name": "Standard",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 7,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "67ca4f46-666c-494e-9ae5-6a673c6ca986",
+    "service_id": "650099a2-d1f5-4307-88b1-678963ea134c",
+    "plan_name": "Mobile",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "d016d114-b3c5-4f1e-9aae-dbe7f1671f27",
+    "service_id": "650099a2-d1f5-4307-88b1-678963ea134c",
+    "plan_name": "Super",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "900d0779-968c-4f89-8537-469a4f264fdc",
+    "service_id": "650099a2-d1f5-4307-88b1-678963ea134c",
+    "plan_name": "Premium",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "0eb77e60-596b-446f-b5f1-ef914aaec360",
+    "service_id": "2c88434e-4659-479f-9f16-717b14631a42",
+    "plan_name": "Standard with Ads",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "2b9209ef-7f3e-47ea-8c6a-89835450928f",
+    "service_id": "2c88434e-4659-479f-9f16-717b14631a42",
+    "plan_name": "Premium",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "1ed9aa8b-73fd-430c-8898-98fd72026c74",
+    "service_id": "9af55e1f-26b7-4537-b17b-9cd74031a995",
+    "plan_name": "Basic",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "b44eb813-c7b0-465c-82fb-e1707d1e8cd0",
+    "service_id": "9af55e1f-26b7-4537-b17b-9cd74031a995",
+    "plan_name": "Standard",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "12176844-f307-44e6-a33d-715f657ea5db",
+    "service_id": "9af55e1f-26b7-4537-b17b-9cd74031a995",
+    "plan_name": "Premium",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "fa958abd-8f95-4502-a2fb-852aed52820b",
+    "service_id": "fc15193c-e842-439b-b3f3-2f3d30b0b8d3",
+    "plan_name": "Basic with Ads",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "3cadc6a8-1acb-4c6e-b4d3-2a9d3ed6ee0b",
+    "service_id": "fc15193c-e842-439b-b3f3-2f3d30b0b8d3",
+    "plan_name": "Standard",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "901af30c-c312-4354-b16c-56a75696c5f0",
+    "service_id": "fc15193c-e842-439b-b3f3-2f3d30b0b8d3",
+    "plan_name": "Premium",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "a5f06ec6-f1ff-476a-b058-4e8216d883d6",
+    "service_id": "32b56a2f-0c27-4900-9d0e-570555d167f2",
+    "plan_name": "Standard with Ads",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "016b088c-7a50-44af-8946-0595f79096e3",
+    "service_id": "32b56a2f-0c27-4900-9d0e-570555d167f2",
+    "plan_name": "Premium",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "38de0aa1-da48-4eed-afaa-62b4697f270b",
+    "service_id": "547efa2d-03c2-47fa-870a-b15284d6c3bc",
+    "plan_name": "Essentiel",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "811a97e2-0218-4c8e-80ad-6898c0b72371",
+    "service_id": "547efa2d-03c2-47fa-870a-b15284d6c3bc",
+    "plan_name": "Ciné Séries",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "6c26997a-e74f-4f94-897a-92f23d52f5c4",
+    "service_id": "547efa2d-03c2-47fa-870a-b15284d6c3bc",
+    "plan_name": "Sport",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "51a15c10-e661-4246-93f6-82adcc35e7a5",
+    "service_id": "15ff419f-6b4c-49a4-a690-6b2a0fadaf5e",
+    "plan_name": "Mobile Pass",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "11408cb2-01bd-449a-8af1-4ca5915a1d22",
+    "service_id": "15ff419f-6b4c-49a4-a690-6b2a0fadaf5e",
+    "plan_name": "Super Sports",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "f54b72c9-d7a9-43cc-b5ff-f192cbc16703",
+    "service_id": "15ff419f-6b4c-49a4-a690-6b2a0fadaf5e",
+    "plan_name": "Unlimited",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "da893caa-ac10-4ced-b6b5-d5627be76b2b",
+    "service_id": "697b3a9b-f66e-4fe9-86fd-dab4253e061f",
+    "plan_name": "Basic",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "07909cb0-ca80-488d-bd4d-0da472561413",
+    "service_id": "697b3a9b-f66e-4fe9-86fd-dab4253e061f",
+    "plan_name": "Premium",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "1beb433a-29ad-4c81-b7cd-81b3b343f7a9",
+    "service_id": "697b3a9b-f66e-4fe9-86fd-dab4253e061f",
+    "plan_name": "Premium Ad-Free",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "69503f5d-05e3-4318-9dab-089d6acc4b4a",
+    "service_id": "848beb6d-2161-4889-a6f1-3cb14141dbdf",
+    "plan_name": "Basic with Ads",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 7,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "efb29a66-5baf-414b-a519-6277cbd16df6",
+    "service_id": "848beb6d-2161-4889-a6f1-3cb14141dbdf",
+    "plan_name": "Standard",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 7,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "3b3144ae-99dc-4291-be2e-6bfdec78f6d5",
+    "service_id": "848beb6d-2161-4889-a6f1-3cb14141dbdf",
+    "plan_name": "Premium",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 7,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "8c180502-1a10-45f3-8a16-e601d4ce83f0",
+    "service_id": "1dbd7823-45b5-4713-99ff-0b4decddec8d",
+    "plan_name": "Standard",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "92dca51e-18bc-44ee-98d5-6d2e662ffa16",
+    "service_id": "1dbd7823-45b5-4713-99ff-0b4decddec8d",
+    "plan_name": "Premium",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 0,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "08b8fcc7-2287-4fef-96da-e1c05d872008",
+    "service_id": "5259600f-b6dc-4102-a7b6-c58a29922f03",
+    "plan_name": "Premium with Ads",
+    "billing_cycle": "monthly",
+    "is_default": false,
+    "trial_days": 14,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "cedb4cd6-ed0f-403f-83ec-5cb686be64ae",
+    "service_id": "5259600f-b6dc-4102-a7b6-c58a29922f03",
+    "plan_name": "Premium",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 14,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  },
+  {
+    "id": "1977024c-2ae7-44a1-a5cc-7df0691787fc",
+    "service_id": "a04dd529-5b5a-4853-9a70-bd409a8cc6e6",
+    "plan_name": "Standard",
+    "billing_cycle": "monthly",
+    "is_default": true,
+    "trial_days": 31,
+    "created_at": "2026-08-02T04:15:55.311Z"
+  }
+]

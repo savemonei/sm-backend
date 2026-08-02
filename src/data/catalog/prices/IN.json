@@ -1,0 +1,501 @@
+{
+  "region": "IN",
+  "currency": "INR",
+  "currencySymbol": "₹",
+  "services": [
+    {
+      "id": "650099a2-d1f5-4307-88b1-678963ea134c",
+      "slug": "hotstar",
+      "name": "Jio Hotstar",
+      "icon": "🌟",
+      "iconType": "emoji",
+      "iconName": "star",
+      "color": "#0C3B7C",
+      "category": "streaming",
+      "websiteUrl": "https://hotstar.com",
+      "isGlobal": false,
+      "plans": [
+        {
+          "id": "67ca4f46-666c-494e-9ae5-6a673c6ca986",
+          "name": "Mobile",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 149,
+          "currency": "INR"
+        },
+        {
+          "id": "d016d114-b3c5-4f1e-9aae-dbe7f1671f27",
+          "name": "Super",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 299,
+          "currency": "INR"
+        },
+        {
+          "id": "900d0779-968c-4f89-8537-469a4f264fdc",
+          "name": "Premium",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 499,
+          "currency": "INR"
+        }
+      ],
+      "popularityRank": 1,
+      "isRegional": true,
+      "localName": null
+    },
+    {
+      "id": "2ab9f544-74cd-4e16-b56d-5614c76151e5",
+      "slug": "netflix",
+      "name": "Netflix",
+      "icon": "🎬",
+      "iconType": "mci",
+      "iconName": "netflix",
+      "color": "#E50914",
+      "category": "streaming",
+      "websiteUrl": "https://netflix.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "bde216b8-c8ce-4de9-bb7c-fcaab003386a",
+          "name": "Standard with Ads",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 149,
+          "currency": "INR"
+        },
+        {
+          "id": "5afff06f-8963-4001-b410-5569ac0c7c05",
+          "name": "Mobile",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 149,
+          "currency": "INR"
+        },
+        {
+          "id": "e8b42d48-1aef-4099-80bf-e066cecd399f",
+          "name": "Basic",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 199,
+          "currency": "INR"
+        },
+        {
+          "id": "5d0f4ae8-ba23-4101-b544-802d3254a5b0",
+          "name": "Standard",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 499,
+          "currency": "INR"
+        },
+        {
+          "id": "b4b0ea92-08b8-4d61-ad8a-2661f6f6fbff",
+          "name": "Premium",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 649,
+          "currency": "INR"
+        }
+      ],
+      "popularityRank": 2,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "fbb442b5-17db-4bd4-98ae-027ecbfd9c27",
+      "slug": "amazon-prime",
+      "name": "Amazon Prime",
+      "icon": "📦",
+      "iconType": "fa5",
+      "iconName": "amazon",
+      "color": "#FF9900",
+      "category": "shopping",
+      "websiteUrl": "https://amazon.com/prime",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "a0ac581c-eaf3-48d9-a0c7-fb8f1e890edc",
+          "name": "Monthly",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 30,
+          "price": 299,
+          "currency": "INR"
+        },
+        {
+          "id": "6305f2ff-da39-4555-a78f-91e2ccfccfc4",
+          "name": "Yearly",
+          "billingCycle": "yearly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 1499,
+          "currency": "INR"
+        }
+      ],
+      "popularityRank": 3,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "dbb97b93-2a67-4dc0-8d04-5f36d6bb6402",
+      "slug": "spotify",
+      "name": "Spotify",
+      "icon": "🎵",
+      "iconType": "fa5",
+      "iconName": "spotify",
+      "color": "#1DB954",
+      "category": "music",
+      "websiteUrl": "https://spotify.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "7bdb91fa-a47f-4c77-bcfa-8058c40967ab",
+          "name": "Individual",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 30,
+          "price": 119,
+          "currency": "INR"
+        },
+        {
+          "id": "82afb264-00c9-44cd-a719-893def8e5f1d",
+          "name": "Student",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 59,
+          "currency": "INR"
+        },
+        {
+          "id": "a110a707-c6ec-4bd3-9f35-db3d97f89878",
+          "name": "Duo",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 149,
+          "currency": "INR"
+        },
+        {
+          "id": "1a36de00-7fad-48cd-92de-3a81d40cd979",
+          "name": "Family",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 179,
+          "currency": "INR"
+        }
+      ],
+      "popularityRank": 4,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "dee97bc1-1a7e-42d3-ad69-75f560749855",
+      "slug": "youtube-premium",
+      "name": "YouTube Premium",
+      "icon": "▶️",
+      "iconType": "fa5",
+      "iconName": "youtube",
+      "color": "#FF0000",
+      "category": "streaming",
+      "websiteUrl": "https://youtube.com/premium",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "c212a57f-82c8-43c2-89cf-8885d4adba57",
+          "name": "Lite",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 14,
+          "price": 89,
+          "currency": "INR"
+        },
+        {
+          "id": "b03f094c-02e3-4f0c-83f5-6af5d01e0d6f",
+          "name": "Individual",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 30,
+          "price": 129,
+          "currency": "INR"
+        },
+        {
+          "id": "aa05c4d5-57b2-4d3d-8eeb-500abc69f12f",
+          "name": "Family",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 299,
+          "currency": "INR"
+        },
+        {
+          "id": "14610c6d-7d94-42ed-924f-9800e483de5d",
+          "name": "Student",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 79,
+          "currency": "INR"
+        }
+      ],
+      "popularityRank": 5,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "2ec2a6bf-0979-4e92-a680-7b336f0226d9",
+      "slug": "sonyliv",
+      "name": "SonyLIV",
+      "icon": "🎬",
+      "iconType": "emoji",
+      "iconName": "play-circle",
+      "color": "#111111",
+      "category": "streaming",
+      "websiteUrl": "https://sonyliv.com",
+      "isGlobal": false,
+      "plans": [
+        {
+          "id": "969a21ea-21e2-427c-ba56-788aff9457a8",
+          "name": "Mobile",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 299,
+          "currency": "INR"
+        },
+        {
+          "id": "c8bbf38c-37f1-4f10-824b-03174593b7bc",
+          "name": "Premium",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 599,
+          "currency": "INR"
+        },
+        {
+          "id": "1e2fe6c8-a0d7-467d-bbea-fe2176fd47f3",
+          "name": "Premium Lite",
+          "billingCycle": "yearly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 999,
+          "currency": "INR"
+        }
+      ],
+      "popularityRank": 6,
+      "isRegional": true,
+      "localName": null
+    },
+    {
+      "id": "4a0cfaa8-e692-4e6b-8d9b-5efd86d940ea",
+      "slug": "zee5",
+      "name": "ZEE5",
+      "icon": "📽️",
+      "iconType": "emoji",
+      "iconName": "television-classic",
+      "color": "#8300E9",
+      "category": "streaming",
+      "websiteUrl": "https://zee5.com",
+      "isGlobal": false,
+      "plans": [
+        {
+          "id": "cf3c4551-b411-403d-bbf7-d850dd4f2450",
+          "name": "Premium",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 149,
+          "currency": "INR"
+        },
+        {
+          "id": "cb610b97-39a5-42d0-be39-e48d027cebea",
+          "name": "Premium HD",
+          "billingCycle": "yearly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 999,
+          "currency": "INR"
+        }
+      ],
+      "popularityRank": 7,
+      "isRegional": true,
+      "localName": null
+    },
+    {
+      "id": "d106bfe5-b1c3-4923-946c-620cfcdb5086",
+      "slug": "swiggy-one",
+      "name": "Swiggy One",
+      "icon": "🍕",
+      "iconType": "emoji",
+      "iconName": "bike-fast",
+      "color": "#FC8019",
+      "category": "shopping",
+      "websiteUrl": "https://swiggy.com",
+      "isGlobal": false,
+      "plans": [
+        {
+          "id": "eb6c7253-5139-4076-a400-8ba8426ca764",
+          "name": "One",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 149,
+          "currency": "INR"
+        }
+      ],
+      "popularityRank": 8,
+      "isRegional": true,
+      "localName": null
+    },
+    {
+      "id": "e7061937-63d4-4f01-af98-fd46f6297ced",
+      "slug": "zomato-gold",
+      "name": "Zomato Gold",
+      "icon": "🍽️",
+      "iconType": "emoji",
+      "iconName": "food",
+      "color": "#E23744",
+      "category": "shopping",
+      "websiteUrl": "https://zomato.com",
+      "isGlobal": false,
+      "plans": [
+        {
+          "id": "e0e69927-af7c-40de-89ad-88a07bdc1768",
+          "name": "Gold",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 75,
+          "currency": "INR"
+        }
+      ],
+      "popularityRank": 9,
+      "isRegional": true,
+      "localName": null
+    },
+    {
+      "id": "ca9d242b-4526-4722-9b44-7394cd5c63cd",
+      "slug": "apple-music",
+      "name": "Apple Music",
+      "icon": "🎶",
+      "iconType": "fa5",
+      "iconName": "itunes-note",
+      "color": "#FC3C44",
+      "category": "music",
+      "websiteUrl": "https://music.apple.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "3b23d57a-2998-49b2-94f5-10b16b6924c8",
+          "name": "Voice",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 59,
+          "currency": "INR"
+        },
+        {
+          "id": "4fd14138-1667-485d-976d-5224e32c4f6f",
+          "name": "Student",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 69,
+          "currency": "INR"
+        },
+        {
+          "id": "5ca23f71-34ef-488b-b4b8-c7be7ba8fbe6",
+          "name": "Individual",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 30,
+          "price": 139,
+          "currency": "INR"
+        },
+        {
+          "id": "0a086054-85c9-4e17-9cd8-de613e2b175f",
+          "name": "Family",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 30,
+          "price": 229,
+          "currency": "INR"
+        }
+      ],
+      "popularityRank": 10,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "d19a1a04-37b0-4d0b-aebb-a317b37cabfd",
+      "slug": "chatgpt",
+      "name": "ChatGPT Plus",
+      "icon": "🤖",
+      "iconType": "emoji",
+      "iconName": "robot",
+      "color": "#10A37F",
+      "category": "productivity",
+      "websiteUrl": "https://chat.openai.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "54b6f813-6414-473e-a746-62a79cff8dd1",
+          "name": "Plus",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 1950,
+          "currency": "INR"
+        }
+      ],
+      "popularityRank": 11,
+      "isRegional": false,
+      "localName": null
+    },
+    {
+      "id": "9b2c05a4-5886-4477-a077-4051bf5c6284",
+      "slug": "disney",
+      "name": "Disney+",
+      "icon": "🏰",
+      "iconType": "emoji",
+      "iconName": "disney-plus",
+      "color": "#113CCF",
+      "category": "streaming",
+      "websiteUrl": "https://disneyplus.com",
+      "isGlobal": true,
+      "plans": [
+        {
+          "id": "1e5868b2-4164-4880-a099-b14b1ac51594",
+          "name": "Premium",
+          "billingCycle": "monthly",
+          "isDefault": true,
+          "trialDays": 0,
+          "price": 299,
+          "currency": "INR"
+        },
+        {
+          "id": "ae3bac1a-9a3e-4503-bdf2-634d8d959f4e",
+          "name": "Mobile",
+          "billingCycle": "monthly",
+          "isDefault": false,
+          "trialDays": 0,
+          "price": 149,
+          "currency": "INR"
+        }
+      ],
+      "popularityRank": 12,
+      "isRegional": false,
+      "localName": null
+    }
+  ],
+  "lastUpdated": "2026-08-02T04:15:55.311Z",
+  "cacheVersion": 2
+}

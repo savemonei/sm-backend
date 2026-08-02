@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-02T04:16:57.231Z",
+  "source": "dump-goal-templates",
+  "regions": [
+    "AE",
+    "AU",
+    "BR",
+    "CA",
+    "DE",
+    "IN",
+    "JP",
+    "MX",
+    "SG",
+    "UK",
+    "US"
+  ],
+  "notes": "Goal templates only (not user goals). Edit regions/*.json directly; FR/ES/IT/NL map to DE on the API."
+}
