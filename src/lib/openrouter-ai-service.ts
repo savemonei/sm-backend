@@ -80,6 +80,16 @@ type OpenRouterApiResponse = {
   error?: { message?: string; code?: string | number };
 };
 
+/**
+ * Minimal fetch response shape — avoid global `Response`, which breaks on
+ * Vercel (TS 5.9 + DOM/@types/node web-globals can leave Response as {}).
+ */
+type HttpFetchResponse = {
+  ok: boolean;
+  status: number;
+  text(): Promise<string>;
+};
+
 function newRequestId(): string {
   return `or_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
 }
@@ -128,7 +138,7 @@ async function callOpenRouterOnce(params: {
   const timer = setTimeout(() => controller.abort(), params.timeoutMs);
 
   try {
-    const res = await fetch(params.baseUrl, {
+    const res = (await fetch(params.baseUrl, {
       method: "POST",
       signal: controller.signal,
       headers: {
@@ -143,7 +153,7 @@ async function callOpenRouterOnce(params: {
         messages: params.messages,
         stream: false,
       }),
-    });
+    })) as HttpFetchResponse;
 
     const rawText = await res.text();
     let data: OpenRouterApiResponse = {};
