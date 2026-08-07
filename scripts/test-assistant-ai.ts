@@ -39,6 +39,22 @@ function main() {
   assert.equal(parsed.success, true);
   ok("PlannerResultSchema accepts valid plan");
 
+  const partialFlags = PlannerResultSchema.safeParse({
+    intent: "APP_HELP",
+    confidence: 0.8,
+    tool: "SHOW_HELP",
+    parameters: {},
+    requiresDatabase: false,
+    requiresConfirmation: false,
+    response: "Tips to save money",
+  });
+  assert.equal(partialFlags.success, true);
+  if (partialFlags.success) {
+    assert.equal(partialFlags.data.requiresKnowledge, false);
+    assert.equal(partialFlags.data.requiresReasoning, false);
+  }
+  ok("PlannerResultSchema defaults omitted requires* flags");
+
   const bad = PlannerResultSchema.safeParse({
     ...validPlan,
     tool: "NOPE",

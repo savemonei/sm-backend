@@ -28,6 +28,17 @@ export type HandlerError = {
   body: { error: { code: string; message: string } };
 };
 
+/** Verbose request/response logging. Set ASSISTANT_AI_DEBUG=1 (never leave on in prod long-term). */
+function isAssistantAiDebug(): boolean {
+  const v = process.env.ASSISTANT_AI_DEBUG?.trim().toLowerCase();
+  return v === "1" || v === "true" || v === "yes";
+}
+
+function debugAssistant(payload: Record<string, unknown>): void {
+  if (!isAssistantAiDebug()) return;
+  console.log(JSON.stringify({ scope: "assistant_debug", ...payload }));
+}
+
 /** Strip markdown fences / leading prose so Zod can parse planner JSON. */
 export function extractJsonObject(raw: string): string {
   const trimmed = raw.trim();
@@ -149,6 +160,14 @@ export async function runAssistantPlan(
     },
   ];
 
+  debugAssistant({
+    event: "plan_request",
+    query: req.query,
+    historyTurns: req.history?.length ?? 0,
+    contextKeys: Object.keys(req.context ?? {}),
+    userPrompt: messages[1]?.content,
+  });
+
   const chat = await openRouterChat({
     role: "planner",
     messages,
@@ -159,6 +178,14 @@ export async function runAssistantPlan(
   });
 
   if (!chat.ok) {
+    debugAssistant({
+      event: "plan_error",
+      errorCode: chat.errorCode,
+      message: chat.message,
+      modelsAttempted: chat.modelsAttempted,
+      latencyMs: chat.latencyMs,
+      requestId: chat.requestId,
+    });
     const status =
       chat.errorCode === "unconfigured"
         ? 503
@@ -181,6 +208,13 @@ export async function runAssistantPlan(
 
   const planParsed = parsePlannerResult(chat.content);
   if (!planParsed.ok) {
+    debugAssistant({
+      event: "plan_invalid_json",
+      requestId: chat.requestId,
+      modelUsed: chat.modelUsed,
+      rawContent: chat.content,
+      message: planParsed.message,
+    });
     console.log(
       JSON.stringify({
         scope: "assistant",
@@ -203,6 +237,16 @@ export async function runAssistantPlan(
       },
     };
   }
+
+  debugAssistant({
+    event: "plan_response",
+    requestId: chat.requestId,
+    modelUsed: chat.modelUsed,
+    latencyMs: chat.latencyMs,
+    usage: chat.usage,
+    plan: planParsed.plan,
+    rawContent: chat.content,
+  });
 
   return {
     ok: true,
@@ -245,6 +289,14 @@ export async function runAssistantReason(
     },
   ];
 
+  debugAssistant({
+    event: "reason_request",
+    query: req.query,
+    executionSummary: req.executionSummary,
+    historyTurns: req.history?.length ?? 0,
+    userPrompt: messages[1]?.content,
+  });
+
   const chat = await openRouterChat({
     role: "reasoner",
     messages,
@@ -252,6 +304,14 @@ export async function runAssistantReason(
   });
 
   if (!chat.ok) {
+    debugAssistant({
+      event: "reason_error",
+      errorCode: chat.errorCode,
+      message: chat.message,
+      modelsAttempted: chat.modelsAttempted,
+      latencyMs: chat.latencyMs,
+      requestId: chat.requestId,
+    });
     const status =
       chat.errorCode === "unconfigured"
         ? 503
@@ -274,6 +334,12 @@ export async function runAssistantReason(
 
   const text = chat.content.trim();
   if (!text) {
+    debugAssistant({
+      event: "reason_empty",
+      requestId: chat.requestId,
+      modelUsed: chat.modelUsed,
+      rawContent: chat.content,
+    });
     return {
       ok: false,
       error: {
@@ -284,6 +350,15 @@ export async function runAssistantReason(
       },
     };
   }
+
+  debugAssistant({
+    event: "reason_response",
+    requestId: chat.requestId,
+    modelUsed: chat.modelUsed,
+    latencyMs: chat.latencyMs,
+    usage: chat.usage,
+    text,
+  });
 
   return {
     ok: true,

@@ -5,7 +5,7 @@
 
 import { z } from "zod";
 
-export const PLANNER_PROMPT_VERSION = "planner@v1" as const;
+export const PLANNER_PROMPT_VERSION = "planner@v2" as const;
 export const REASONER_PROMPT_VERSION = "reasoner@v1" as const;
 
 /** Compact intent enum aligned with mobile NluIntent. */
@@ -69,6 +69,7 @@ export const PlannerToolSchema = z.enum([
   "FETCH_LARGEST_TX",
   "FETCH_TOP_MERCHANTS",
   "FETCH_ACCOUNT_BALANCE",
+  "COMPUTE_FINANCIAL_HEALTH",
   "CREATE_TRANSACTION",
   "UPDATE_TRANSACTION",
   "DELETE_TRANSACTION",
@@ -90,15 +91,16 @@ export const PlannerToolSchema = z.enum([
 
 export const PlannerResultSchema = z.object({
   intent: PlannerIntentSchema,
-  confidence: z.number().min(0).max(1),
+  confidence: z.number().min(0).max(1).default(0.5),
   tool: PlannerToolSchema,
   parameters: z.record(z.unknown()).default({}),
-  requiresDatabase: z.boolean(),
-  requiresKnowledge: z.boolean(),
-  requiresReasoning: z.boolean(),
-  requiresConfirmation: z.boolean(),
+  // Free models often omit these flags — default false rather than failing the whole plan
+  requiresDatabase: z.boolean().default(false),
+  requiresKnowledge: z.boolean().default(false),
+  requiresReasoning: z.boolean().default(false),
+  requiresConfirmation: z.boolean().default(false),
   missingFields: z.array(z.string()).default([]),
-  response: z.string(),
+  response: z.string().default(""),
 });
 
 export type PlannerResult = z.infer<typeof PlannerResultSchema>;

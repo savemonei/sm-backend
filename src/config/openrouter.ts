@@ -64,9 +64,16 @@ export type OpenRouterConfig = {
 export function getOpenRouterConfig(): OpenRouterConfig {
   const timeoutRaw = Number(process.env.OPENROUTER_TIMEOUT_MS);
   const retriesRaw = Number(process.env.OPENROUTER_MAX_RETRIES);
+  const rawKey = process.env.OPENROUTER_API_KEY?.trim() || "";
+  // Strip accidental "Bearer " / quotes if pasted into the env var
+  const apiKey =
+    rawKey
+      .replace(/^Bearer\s+/i, "")
+      .replace(/^["']+|["']+$/g, "")
+      .trim() || null;
 
   return {
-    apiKey: process.env.OPENROUTER_API_KEY?.trim() || null,
+    apiKey,
     baseUrl: OPENROUTER_BASE_URL,
     httpReferer:
       process.env.OPENROUTER_HTTP_REFERER?.trim() || "https://savemonei.app",
