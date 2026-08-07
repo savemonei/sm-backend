@@ -30,6 +30,7 @@ Rules:
 - Set requiresConfirmation=true for any write/CRUD (create/update/delete).
 - Set requiresReasoning=true only when a natural-language explanation beyond a short template is needed after local execution.
 - Set requiresKnowledge=true for app help / guides / FAQs that need knowledge packs.
+- For financial health / money health / health score questions: intent=FINANCIAL_HEALTH, tool=COMPUTE_FINANCIAL_HEALTH (not FETCH_NETWORTH).
 - confidence is 0..1 for how sure you are about intent+tool.
 
 JSON schema (all fields required):
