@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import type { Request, Response } from "./types/handlers";
 import authRoutes from "./routes/auth";
+import accountRoutes from "./routes/account";
 import meRoutes from "./routes/me";
 import aiRoutes from "./routes/ai";
 import profileRoutes from "./routes/profile";
@@ -21,6 +22,7 @@ app.get("/health", (_req: Request, res: Response) => {
 });
 
 app.use("/auth", authRoutes);
+app.use("/account", accountRoutes);
 app.use("/me", meRoutes);
 app.use("/ai", aiRoutes);
 app.use("/profile", profileRoutes);
