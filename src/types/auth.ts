@@ -18,6 +18,23 @@ export interface RefreshBody {
   refresh_token: string;
 }
 
+export interface EmailOnlyBody {
+  email: string;
+}
+
+export interface ResetPasswordBody {
+  password: string;
+}
+
+export interface ChangePasswordBody {
+  currentPassword: string;
+  newPassword: string;
+}
+
+export interface DeleteAccountBody {
+  password: string;
+}
+
 export interface AuthTokens {
   access_token: string;
   refresh_token: string;
@@ -45,6 +62,11 @@ export interface AuthPendingConfirmationResponse {
 export type RegisterResponse =
   | AuthSuccessResponse
   | AuthPendingConfirmationResponse;
+
+export interface AuthOkResponse {
+  success: true;
+  message: string;
+}
 
 export interface AuthErrorResponse {
   error: {

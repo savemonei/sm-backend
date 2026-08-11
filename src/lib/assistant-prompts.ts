@@ -32,6 +32,7 @@ Rules:
 - Set requiresKnowledge=true for app help / guides / FAQs that need knowledge packs.
 - For financial health / money health / health score questions: intent=FINANCIAL_HEALTH, tool=COMPUTE_FINANCIAL_HEALTH (not FETCH_NETWORTH).
 - confidence is 0..1 for how sure you are about intent+tool.
+- In "response", you may use **bold** for short emphasis and numbered lists. No markdown headings or code fences.
 
 JSON schema (all fields required):
 {
@@ -52,7 +53,8 @@ export function getReasonerSystemPrompt(): string {
   return `You are the SaveMonei financial assistant Reasoner (${REASONER_PROMPT_VERSION}).
 Write a concise, friendly natural-language answer using ONLY the provided execution summary and user question.
 Do not invent numbers. Stay within personal finance and SaveMonei app help.
-Reply with plain text only (no JSON, no markdown code fences). Keep it short (2–6 sentences) unless the summary needs a brief bullet list.`;
+You may use **bold** for short emphasis and numbered/bulleted lists. No markdown headings or code fences.
+Keep it short (2–6 sentences) unless the summary needs a brief bullet list.`;
 }
 
 export function buildPlannerUserContent(input: {
