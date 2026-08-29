@@ -92,7 +92,11 @@ function mapAuthErrorMessage(code: string | undefined, fallback: string): string
   if (c === "invalid_credentials" || c === "invalid_grant") {
     return "Invalid email or password.";
   }
-  if (c === "user_already_exists" || c === "email_exists") {
+  if (
+    c === "user_already_exists" ||
+    c === "email_exists" ||
+    c === "user_already_registered"
+  ) {
     return "Unable to create account with that email. Try signing in or reset your password.";
   }
   if (c === "over_email_send_rate_limit" || c === "over_request_rate_limit") {
@@ -100,6 +104,9 @@ function mapAuthErrorMessage(code: string | undefined, fallback: string): string
   }
   if (c === "weak_password") {
     return "Please choose a stronger password.";
+  }
+  if (c === "unexpected_failure") {
+    return "We couldn’t create your account right now. Please try again in a moment.";
   }
   return fallback;
 }
@@ -268,13 +275,21 @@ router.get("/verified", (_req: Request, res: Response) => {
 
 /**
  * POST /auth/register
+ * Public — no Authorization header required.
  * Body: { email, password, fullName }
  */
 router.post("/register", async (req: Request, res: Response) => {
   try {
-    const { email, password, fullName } = req.body as RegisterBody;
-    if (!email || !password || typeof fullName !== "string") {
+    const body = (req.body ?? {}) as Partial<RegisterBody>;
+    const email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
+    const password = typeof body.password === "string" ? body.password : "";
+    const fullName = typeof body.fullName === "string" ? body.fullName.trim() : "";
+
+    if (!email || !password || !fullName) {
       return res.status(400).json(toError("invalid_body", "email, password, and fullName are required"));
+    }
+    if (password.length < 6) {
+      return res.status(400).json(toError("weak_password", "Password must be at least 6 characters."));
     }
 
     const { data, error } = await authClient.signUp({
@@ -287,6 +302,11 @@ router.post("/register", async (req: Request, res: Response) => {
     });
 
     if (error) {
+      console.error("Auth register supabase error:", {
+        code: error.code,
+        message: error.message,
+        status: error.status,
+      });
       return res
         .status(400)
         .json(
@@ -299,6 +319,20 @@ router.post("/register", async (req: Request, res: Response) => {
 
     if (!data.user) {
       return res.status(400).json(toError("signup_failed", "Registration failed"));
+    }
+
+    // Supabase may return a user with empty identities when the email is already registered
+    // and confirmations are enabled (no error thrown).
+    const identities = (data.user as { identities?: unknown[] }).identities;
+    if (Array.isArray(identities) && identities.length === 0) {
+      return res
+        .status(400)
+        .json(
+          toError(
+            "user_already_registered",
+            mapAuthErrorMessage("user_already_registered", "Unable to create account with that email.")
+          )
+        );
     }
 
     if (!data.session) {
