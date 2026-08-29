@@ -1,0 +1,163 @@
+{
+  "version": 2,
+  "minAppVersion": "1.0.0",
+  "updatedAt": "2026-08-29T00:00:00.000Z",
+  "defaults": {
+    "enabledTypes": [
+      "credit_card_due",
+      "loan_payment",
+      "subscription_renewal",
+      "txn_review",
+      "budget_alert",
+      "weekly_report"
+    ],
+    "hourLocal": 9,
+    "minuteLocal": 0,
+    "quietHours": { "startHour": 22, "endHour": 7 }
+  },
+  "categories": [
+    {
+      "id": "payment_due",
+      "actions": [
+        { "id": "pay", "title": "Pay now", "opensApp": true },
+        { "id": "view", "title": "View", "opensApp": true }
+      ]
+    },
+    {
+      "id": "txn_review",
+      "actions": [
+        { "id": "review", "title": "Review", "opensApp": true }
+      ]
+    },
+    {
+      "id": "budget_alert",
+      "actions": [
+        { "id": "view", "title": "View budget", "opensApp": true }
+      ]
+    },
+    {
+      "id": "weekly_report",
+      "actions": [
+        { "id": "view", "title": "Open reports", "opensApp": true }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "cc_due",
+      "type": "credit_card_due",
+      "enabled": true,
+      "daysBefore": [3, 1, 0],
+      "hourLocal": 9,
+      "minuteLocal": 0,
+      "categoryId": "payment_due",
+      "title": "{{name}} due soon",
+      "body": "{{amountLabel}} due {{dueLabel}}",
+      "deepLink": "savemonei://accounts?payCardId={{sourceId}}",
+      "actions": [
+        {
+          "id": "pay",
+          "title": "Pay now",
+          "deepLink": "savemonei://accounts?payCardId={{sourceId}}"
+        },
+        {
+          "id": "view",
+          "title": "View",
+          "deepLink": "savemonei://accounts"
+        }
+      ]
+    },
+    {
+      "id": "loan_due",
+      "type": "loan_payment",
+      "enabled": true,
+      "daysBefore": [3, 1, 0],
+      "preferEntityReminderDays": true,
+      "fallbackDaysBefore": [3],
+      "hourLocal": 9,
+      "minuteLocal": 0,
+      "categoryId": "payment_due",
+      "title": "{{name}} payment",
+      "body": "{{amountLabel}} due {{dueLabel}}",
+      "deepLink": "savemonei://accounts?loanId={{sourceId}}",
+      "actions": [
+        {
+          "id": "view",
+          "title": "View loans",
+          "deepLink": "savemonei://accounts?loanId={{sourceId}}"
+        }
+      ]
+    },
+    {
+      "id": "sub_renew",
+      "type": "subscription_renewal",
+      "enabled": true,
+      "daysBefore": [3, 1],
+      "hourLocal": 10,
+      "minuteLocal": 0,
+      "categoryId": "payment_due",
+      "title": "{{name}} renews soon",
+      "body": "{{amountLabel}} on {{dueLabel}}",
+      "deepLink": "savemonei://subscriptions",
+      "actions": [
+        {
+          "id": "view",
+          "title": "View",
+          "deepLink": "savemonei://subscriptions"
+        }
+      ]
+    },
+    {
+      "id": "txn_review_daily",
+      "type": "txn_review",
+      "enabled": true,
+      "hourLocal": 21,
+      "minuteLocal": 0,
+      "categoryId": "txn_review",
+      "title": "Review your transactions",
+      "body": "{{countLabel}}",
+      "deepLink": "savemonei://pending_review",
+      "actions": [
+        {
+          "id": "review",
+          "title": "Review",
+          "deepLink": "savemonei://pending_review"
+        }
+      ]
+    },
+    {
+      "id": "budget_threshold",
+      "type": "budget_alert",
+      "enabled": true,
+      "categoryId": "budget_alert",
+      "title": "Budget alert: {{name}}",
+      "body": "You've {{urgency}} — spent {{percent}}% ({{spentLabel}} of {{limitLabel}})",
+      "deepLink": "savemonei://transactions?view=budgets",
+      "actions": [
+        {
+          "id": "view",
+          "title": "View budget",
+          "deepLink": "savemonei://transactions?view=budgets"
+        }
+      ]
+    },
+    {
+      "id": "weekly_summary",
+      "type": "weekly_report",
+      "enabled": true,
+      "hourLocal": 9,
+      "minuteLocal": 0,
+      "categoryId": "weekly_report",
+      "title": "Your week in money",
+      "body": "Open reports for this week's spending summary",
+      "deepLink": "savemonei://reports",
+      "actions": [
+        {
+          "id": "view",
+          "title": "Open reports",
+          "deepLink": "savemonei://reports"
+        }
+      ]
+    }
+  ]
+}
