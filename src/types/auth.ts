@@ -22,6 +22,16 @@ export interface EmailOnlyBody {
   email: string;
 }
 
+export interface OtpSendBody {
+  email: string;
+  fullName?: string;
+}
+
+export interface OtpVerifyBody {
+  email: string;
+  token: string;
+}
+
 export interface ResetPasswordBody {
   password: string;
 }
@@ -32,7 +42,7 @@ export interface ChangePasswordBody {
 }
 
 export interface DeleteAccountBody {
-  password: string;
+  confirm?: boolean;
 }
 
 export interface AuthTokens {
