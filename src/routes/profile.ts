@@ -2,37 +2,11 @@ import { Router } from "express";
 import type { RequestWithUser, Response } from "../types/handlers";
 import { requireAuth } from "../middleware/auth";
 import { supabaseAdmin } from "../config/supabase";
-import type { UserProfile, UserProfileRow, LifeStage } from "../types/profile";
+import type { UserProfileRow, LifeStage } from "../types/profile";
+import { rowToProfile } from "../lib/user-profile";
 
 const router = Router();
 const TABLE = "user_profiles";
-
-function parseLifeStages(raw: string | null): LifeStage[] {
-  if (!raw) return [];
-  if (raw.startsWith("[")) {
-    try {
-      const arr = JSON.parse(raw) as unknown;
-      return Array.isArray(arr) ? (arr as LifeStage[]).filter(Boolean) : [];
-    } catch {
-      return [raw as LifeStage];
-    }
-  }
-  return [raw as LifeStage];
-}
-
-function rowToProfile(row: UserProfileRow): UserProfile {
-  return {
-    user_id: row.user_id,
-    life_stages: parseLifeStages(row.life_stage),
-    primary_goals: Array.isArray(row.primary_goals) ? (row.primary_goals as UserProfile["primary_goals"]) : [],
-    use_case: row.use_case as UserProfile["use_case"],
-    birth_year: row.birth_year,
-    gender: row.gender,
-    profile_completed_at: row.profile_completed_at,
-    created_at: row.created_at,
-    updated_at: row.updated_at,
-  };
-}
 
 router.get("/", requireAuth, async (req: RequestWithUser, res: Response) => {
   if (!req.user) {
@@ -89,6 +63,16 @@ router.put("/", requireAuth, async (req: RequestWithUser, res: Response) => {
   }
   const now = new Date().toISOString();
   const life_stages = Array.isArray(body.life_stages) ? (body.life_stages as LifeStage[]).filter(Boolean) : [];
+  const fullName = typeof body.full_name === "string" ? body.full_name.trim() : "";
+  if (fullName) {
+    const { error: nameError } = await supabaseAdmin.auth.admin.updateUserById(userId, {
+      user_metadata: { full_name: fullName },
+    });
+    if (nameError) {
+      console.warn("[profile] full_name update error:", nameError.message);
+    }
+  }
+
   const row = {
     user_id: userId,
     life_stage: life_stages.length > 0 ? JSON.stringify(life_stages) : null,
