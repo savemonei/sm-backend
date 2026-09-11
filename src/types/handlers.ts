@@ -13,4 +13,4 @@ export type Response = CoreResponse;
 export type NextFunction = CoreNextFunction;
 
 /** Request with optional user set by auth middleware (see types/express.d.ts). */
-export type RequestWithUser = CoreRequest & { user?: { id: string; email?: string } };
+export type RequestWithUser = CoreRequest & { user?: { id: string; email?: string; full_name?: string } };

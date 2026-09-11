@@ -1,7 +1,7 @@
 {
   "name": "savemonei-backend",
   "version": "1.0.0",
-  "description": "Backend API for Savemonei (auth, AI, sync)",
+  "description": "Backend API for SaveMonei (auth, AI, sync)",
   "main": "dist/index.js",
   "packageManager": "pnpm@9.14.2",
   "scripts": {

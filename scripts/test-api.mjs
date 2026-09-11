@@ -72,7 +72,7 @@ async function request(path, options = {}) {
 }
 
 async function run() {
-  console.log("\n--- Savemonei Backend API Tests ---");
+  console.log("\n--- SaveMonei Backend API Tests ---");
   console.log(`BASE_URL: ${baseUrl}`);
   console.log(`TEST_EMAIL: ${email ? email.replace(/^(.{2}).*@/, "$1***@") : "(not set)"}\n`);
 

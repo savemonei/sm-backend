@@ -136,7 +136,7 @@ router.get("/callback", (_req: Request, res: Response) => {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Continue in Savemonei</title>
+    <title>Continue in SaveMonei</title>
     <style>
       :root {
         color-scheme: light dark;
@@ -172,9 +172,9 @@ router.get("/callback", (_req: Request, res: Response) => {
   <body>
     <main>
       <div class="mark">✓</div>
-      <h1 id="title">Opening Savemonei…</h1>
+      <h1 id="title">Opening SaveMonei…</h1>
       <p id="message">If the app does not open automatically, tap the button below.</p>
-      <a class="btn" id="open" href="${deepLinkBase}">Open Savemonei</a>
+      <a class="btn" id="open" href="${deepLinkBase}">Open SaveMonei</a>
       <p class="muted" id="hint">You can close this page after the app opens.</p>
     </main>
     <script>
@@ -219,7 +219,7 @@ router.get("/callback", (_req: Request, res: Response) => {
 
         if (type === "recovery") {
           titleEl.textContent = "Reset your password";
-          messageEl.textContent = "Continue in the Savemonei app to choose a new password.";
+          messageEl.textContent = "Continue in the SaveMonei app to choose a new password.";
         } else if (type === "signup" || type === "email" || type === "email_change") {
           titleEl.textContent = "Email confirmed";
           messageEl.textContent = accessToken
@@ -246,7 +246,7 @@ router.get("/verified", (_req: Request, res: Response) => {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Email confirmed | Savemonei</title>
+    <title>Email confirmed | SaveMonei</title>
     <style>
       :root {
         color-scheme: light dark;
@@ -276,8 +276,8 @@ router.get("/verified", (_req: Request, res: Response) => {
     <main>
       <div class="mark">✓</div>
       <h1>Email confirmed</h1>
-      <p>Your Savemonei account is ready. Open the app and sign in.</p>
-      <a class="btn" href="${deepLinkBase}auth/login">Open Savemonei</a>
+      <p>Your SaveMonei account is ready. Open the app and sign in.</p>
+      <a class="btn" href="${deepLinkBase}auth/login">Open SaveMonei</a>
     </main>
   </body>
 </html>`);
@@ -499,7 +499,14 @@ router.post("/otp/verify", async (req: Request, res: Response) => {
       return res.status(401).json(toError("no_session", "Verification failed. Please try again."));
     }
 
-    const profile = await fetchUserProfile(data.user.id);
+    const profileRow = await fetchUserProfile(data.user.id);
+    const authFullName =
+      typeof data.user.user_metadata?.full_name === "string"
+        ? data.user.user_metadata.full_name.trim()
+        : "";
+    const profile = profileRow
+      ? { ...profileRow, full_name: authFullName || null }
+      : null;
     const payload: AuthOtpVerifyResponse = {
       ...toAuthSuccess(data.session, data.user),
       profile,
