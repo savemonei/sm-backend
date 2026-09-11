@@ -1,7 +1,7 @@
 
-# Savemonei Backend
+# SaveMonei Backend
 
-Backend API for Savemonei: auth (via Supabase), AI, and sync. App talks only to this backend; backend talks to Supabase for auth.
+Backend API for SaveMonei: auth (via Supabase), AI, and sync. App talks only to this backend; backend talks to Supabase for auth.
 
 ## Setup
 
@@ -64,7 +64,7 @@ Base URL: `http://localhost:4000` (or your `PORT`).
 {
   "user": { "id": "...", "email": "...", "full_name": "..." },
   "emailConfirmationRequired": true,
-  "message": "Confirm your email, then sign in to start using Savemonei."
+  "message": "Confirm your email, then sign in to start using SaveMonei."
 }
 ```
 

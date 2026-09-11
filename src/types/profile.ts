@@ -29,6 +29,7 @@ export type UseCase =
 
 export interface UserProfile {
   user_id: string;
+  full_name?: string | null;
   life_stages: LifeStage[];
   primary_goals: PrimaryGoal[];
   use_case: UseCase | null;

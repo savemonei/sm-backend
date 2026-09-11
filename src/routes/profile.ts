@@ -37,6 +37,7 @@ router.get("/", requireAuth, async (req: RequestWithUser, res: Response) => {
   }
   return res.status(200).json({
     profile: data ? rowToProfile(data as UserProfileRow) : null,
+    full_name: req.user.full_name ?? null,
   });
 });
 

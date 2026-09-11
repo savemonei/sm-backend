@@ -4,11 +4,17 @@ import type { RequestWithUser, Response, NextFunction } from "../types/handlers"
 export interface AuthUser {
   id: string;
   email?: string;
+  full_name?: string;
 }
 
 // Use type assertion for Supabase auth (avoids type mismatches across @supabase/supabase-js versions)
 const auth = supabase.auth as {
-  getUser: (jwt: string) => Promise<{ data: { user: { id: string; email?: string } | null }; error: { message: string } | null }>;
+  getUser: (jwt: string) => Promise<{
+    data: {
+      user: { id: string; email?: string; user_metadata?: { full_name?: string } } | null;
+    };
+    error: { message: string } | null;
+  }>;
 };
 
 /**
@@ -45,9 +51,12 @@ export async function requireAuth(
       return;
     }
 
+    const fullName =
+      typeof user.user_metadata?.full_name === "string" ? user.user_metadata.full_name.trim() : "";
     req.user = {
       id: user.id,
       email: user.email,
+      ...(fullName ? { full_name: fullName } : {}),
     };
     next();
   } catch (e) {
