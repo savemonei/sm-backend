@@ -2,7 +2,6 @@ import { Router } from "express";
 import type { RequestWithUser, Response } from "../types/handlers";
 import { requireAuth } from "../middleware/auth";
 import { supabaseAdmin } from "../config/supabase";
-import { authClient } from "../lib/auth-client";
 import type { DeleteAccountBody, AuthErrorResponse, AuthOkResponse } from "../types/auth";
 
 const router = Router();
@@ -13,8 +12,8 @@ function toError(code: string, message: string): AuthErrorResponse {
 
 /**
  * DELETE /account
- * Body: { password }
- * Verifies password, deletes profile + sync tokens + Auth user (server-side only).
+ * Body: { confirm: true }
+ * Deletes profile + sync tokens + Auth user (server-side only).
  */
 router.delete("/", requireAuth, async (req: RequestWithUser, res: Response) => {
   try {
@@ -30,23 +29,9 @@ router.delete("/", requireAuth, async (req: RequestWithUser, res: Response) => {
       );
     }
 
-    const { password } = (req.body || {}) as DeleteAccountBody;
-    if (!password || typeof password !== "string") {
-      return res.status(400).json(toError("invalid_body", "password is required"));
-    }
-
-    const email = req.user.email;
-    if (!email) {
-      return res.status(400).json(toError("missing_email", "Account email is unavailable"));
-    }
-
-    // Re-authenticate before destructive action
-    const { error: verifyError } = await authClient.signInWithPassword({
-      email,
-      password,
-    });
-    if (verifyError) {
-      return res.status(401).json(toError("invalid_credentials", "Incorrect password. Please try again."));
+    const { confirm } = (req.body || {}) as DeleteAccountBody;
+    if (confirm !== true) {
+      return res.status(400).json(toError("invalid_body", "confirm must be true"));
     }
 
     const userId = req.user.id;

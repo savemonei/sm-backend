@@ -11,6 +11,8 @@ import type {
   LoginBody,
   RefreshBody,
   EmailOnlyBody,
+  OtpSendBody,
+  OtpVerifyBody,
   ResetPasswordBody,
   ChangePasswordBody,
   AuthSuccessResponse,
@@ -104,6 +106,12 @@ function mapAuthErrorMessage(code: string | undefined, fallback: string): string
   }
   if (c === "weak_password") {
     return "Please choose a stronger password.";
+  }
+  if (c === "otp_expired" || c === "otp_disabled" || c.includes("otp")) {
+    return "That code has expired. Request a new one.";
+  }
+  if (c === "invalid_otp" || c === "token_expired") {
+    return "Invalid or expired code. Please try again.";
   }
   if (c === "unexpected_failure") {
     return "We couldn’t create your account right now. Please try again in a moment.";
@@ -407,6 +415,92 @@ router.post("/refresh", async (req: Request, res: Response) => {
   } catch (e) {
     console.error("Auth refresh error:", e);
     return res.status(500).json(toError("server_error", "Refresh failed"));
+  }
+});
+
+/**
+ * POST /auth/otp/send
+ * Body: { email, fullName? }
+ * Sends a one-time code to the email. Creates the user on first successful verify.
+ */
+router.post("/otp/send", async (req: Request, res: Response) => {
+  try {
+    const body = (req.body ?? {}) as Partial<OtpSendBody>;
+    const email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
+    const fullName = typeof body.fullName === "string" ? body.fullName.trim() : "";
+
+    if (!email) {
+      return res.status(400).json(toError("invalid_body", "email is required"));
+    }
+
+    const { error } = await authClient.signInWithOtp({
+      email,
+      options: {
+        shouldCreateUser: true,
+        data: fullName ? { full_name: fullName } : undefined,
+      },
+    });
+
+    if (error) {
+      const code = (error.code || "").toLowerCase();
+      if (code.includes("rate") || /rate|seconds/i.test(error.message || "")) {
+        return res.status(429).json(
+          toError("rate_limited", "Too many attempts. Please wait a moment and try again.")
+        );
+      }
+      console.warn("[auth] otp/send:", error.code, error.message);
+      return res.status(400).json(
+        toError(error.code ?? "otp_send_failed", mapAuthErrorMessage(error.code, "Unable to send code. Please try again."))
+      );
+    }
+
+    return res.status(200).json(toOk(SAFE_EMAIL_SENT));
+  } catch (e) {
+    console.error("Auth otp/send error:", e);
+    return res.status(500).json(toError("server_error", "Something went wrong. Please try again."));
+  }
+});
+
+/**
+ * POST /auth/otp/verify
+ * Body: { email, token }
+ */
+router.post("/otp/verify", async (req: Request, res: Response) => {
+  try {
+    const body = (req.body ?? {}) as Partial<OtpVerifyBody>;
+    const email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
+    const token = typeof body.token === "string" ? body.token.trim() : "";
+
+    if (!email || !token) {
+      return res.status(400).json(toError("invalid_body", "email and token are required"));
+    }
+    if (!/^\d{6,8}$/.test(token)) {
+      return res.status(400).json(toError("invalid_otp", "Enter the code from your email."));
+    }
+
+    const { data, error } = await authClient.verifyOtp({
+      email,
+      token,
+      type: "email",
+    });
+
+    if (error) {
+      return res.status(401).json(
+        toError(
+          error.code ?? "invalid_otp",
+          mapAuthErrorMessage(error.code, "Invalid or expired code. Please try again.")
+        )
+      );
+    }
+
+    if (!data.session || !data.user) {
+      return res.status(401).json(toError("no_session", "Verification failed. Please try again."));
+    }
+
+    return res.status(200).json(toAuthSuccess(data.session, data.user));
+  } catch (e) {
+    console.error("Auth otp/verify error:", e);
+    return res.status(500).json(toError("server_error", "Verification failed"));
   }
 });
 
