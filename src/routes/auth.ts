@@ -19,7 +19,9 @@ import type {
   AuthPendingConfirmationResponse,
   AuthErrorResponse,
   AuthOkResponse,
+  AuthOtpVerifyResponse,
 } from "../types/auth";
+import { fetchUserProfile } from "../lib/user-profile";
 
 const router = Router();
 
@@ -497,7 +499,13 @@ router.post("/otp/verify", async (req: Request, res: Response) => {
       return res.status(401).json(toError("no_session", "Verification failed. Please try again."));
     }
 
-    return res.status(200).json(toAuthSuccess(data.session, data.user));
+    const profile = await fetchUserProfile(data.user.id);
+    const payload: AuthOtpVerifyResponse = {
+      ...toAuthSuccess(data.session, data.user),
+      profile,
+      profileComplete: Boolean(profile?.profile_completed_at),
+    };
+    return res.status(200).json(payload);
   } catch (e) {
     console.error("Auth otp/verify error:", e);
     return res.status(500).json(toError("server_error", "Verification failed"));

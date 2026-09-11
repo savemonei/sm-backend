@@ -63,6 +63,12 @@ export interface AuthSuccessResponse {
   session: AuthTokens;
 }
 
+/** OTP verify — includes profile state for routing after sign-in. */
+export interface AuthOtpVerifyResponse extends AuthSuccessResponse {
+  profileComplete: boolean;
+  profile: import("./profile").UserProfile | null;
+}
+
 export interface AuthPendingConfirmationResponse {
   user: UserInfo;
   emailConfirmationRequired: true;
