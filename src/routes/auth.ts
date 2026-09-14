@@ -22,8 +22,32 @@ import type {
   AuthOtpVerifyResponse,
 } from "../types/auth";
 import { fetchUserProfile } from "../lib/user-profile";
+import {
+  isPlayReviewEmail,
+  isPlayReviewOtp,
+  signInPlayReviewUser,
+} from "../lib/play-review-auth";
 
 const router = Router();
+
+async function buildOtpVerifyResponse(
+  session: { access_token: string; refresh_token: string; expires_at?: number },
+  user: { id: string; email?: string; user_metadata?: { full_name?: string } }
+): Promise<AuthOtpVerifyResponse> {
+  const profileRow = await fetchUserProfile(user.id);
+  const authFullName =
+    typeof user.user_metadata?.full_name === "string"
+      ? user.user_metadata.full_name.trim()
+      : "";
+  const profile = profileRow
+    ? { ...profileRow, full_name: authFullName || null }
+    : null;
+  return {
+    ...toAuthSuccess(session, user),
+    profile,
+    profileComplete: Boolean(profile?.profile_completed_at),
+  };
+}
 
 const DEFAULT_AUTH_CALLBACK_URL = "https://savemonei-backend.vercel.app/auth/callback";
 const DEFAULT_APP_SCHEME = "savemonei";
@@ -435,6 +459,10 @@ router.post("/otp/send", async (req: Request, res: Response) => {
       return res.status(400).json(toError("invalid_body", "email is required"));
     }
 
+    if (isPlayReviewEmail(email)) {
+      return res.status(200).json(toOk(SAFE_EMAIL_SENT));
+    }
+
     const { error } = await authClient.signInWithOtp({
       email,
       options: {
@@ -480,6 +508,22 @@ router.post("/otp/verify", async (req: Request, res: Response) => {
       return res.status(400).json(toError("invalid_otp", "Enter the code from your email."));
     }
 
+    if (isPlayReviewEmail(email)) {
+      if (!isPlayReviewOtp(token)) {
+        return res.status(401).json(
+          toError("invalid_otp", "Invalid or expired code. Please try again.")
+        );
+      }
+      try {
+        const data = await signInPlayReviewUser(email);
+        const payload = await buildOtpVerifyResponse(data.session, data.user);
+        return res.status(200).json(payload);
+      } catch (e) {
+        console.error("[auth] play-review verify:", e);
+        return res.status(500).json(toError("server_error", "Verification failed"));
+      }
+    }
+
     const { data, error } = await authClient.verifyOtp({
       email,
       token,
@@ -499,19 +543,7 @@ router.post("/otp/verify", async (req: Request, res: Response) => {
       return res.status(401).json(toError("no_session", "Verification failed. Please try again."));
     }
 
-    const profileRow = await fetchUserProfile(data.user.id);
-    const authFullName =
-      typeof data.user.user_metadata?.full_name === "string"
-        ? data.user.user_metadata.full_name.trim()
-        : "";
-    const profile = profileRow
-      ? { ...profileRow, full_name: authFullName || null }
-      : null;
-    const payload: AuthOtpVerifyResponse = {
-      ...toAuthSuccess(data.session, data.user),
-      profile,
-      profileComplete: Boolean(profile?.profile_completed_at),
-    };
+    const payload = await buildOtpVerifyResponse(data.session, data.user);
     return res.status(200).json(payload);
   } catch (e) {
     console.error("Auth otp/verify error:", e);
