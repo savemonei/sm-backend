@@ -5,7 +5,7 @@
 
 import { z } from "zod";
 
-export const PLANNER_PROMPT_VERSION = "planner@v2" as const;
+export const PLANNER_PROMPT_VERSION = "planner@v3" as const;
 export const REASONER_PROMPT_VERSION = "reasoner@v1" as const;
 
 /** Compact intent enum aligned with mobile NluIntent. */
@@ -38,6 +38,7 @@ export const PlannerIntentSchema = z.enum([
   "QUICK_ACTIONS",
   "APP_HELP",
   "GUIDE",
+  "CONVERSATION",
   "GREETING",
   "THANKS",
   "CAPABILITIES",
@@ -86,6 +87,7 @@ export const PlannerToolSchema = z.enum([
   "SHOW_CLARIFY",
   "NAVIGATE",
   "LEGACY_ROUTE",
+  "RESPOND",
   "NOOP",
 ]);
 

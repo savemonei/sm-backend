@@ -53,6 +53,44 @@ export function extractJsonObject(raw: string): string {
   return trimmed;
 }
 
+/** Models sometimes put an intent name in `tool` — map common mistakes. */
+const TOOL_ALIASES: Record<string, string> = {
+  APP_HELP: "SHOW_HELP",
+  GUIDE: "RESPOND",
+  CONVERSATION: "RESPOND",
+  SEARCH: "SHOW_SEARCH",
+  QUICK_ACTIONS: "SHOW_QUICK_ACTIONS",
+  FINANCIAL_HEALTH: "COMPUTE_FINANCIAL_HEALTH",
+  GREETING: "RESPOND",
+  THANKS: "RESPOND",
+  CAPABILITIES: "SHOW_HELP",
+  CLARIFY: "SHOW_CLARIFY",
+  UNKNOWN: "NOOP",
+  INVALID: "NOOP",
+  OUT_OF_SCOPE: "NOOP",
+  TUTORIAL: "LEGACY_ROUTE",
+  WHATS_NEW: "LEGACY_ROUTE",
+  TROUBLESHOOT: "LEGACY_ROUTE",
+  DIAGNOSTICS: "LEGACY_ROUTE",
+  BACKUP_HELP: "SHOW_HELP",
+  SETTINGS_HELP: "SHOW_HELP",
+  REPORTS_HELP: "SHOW_HELP",
+};
+
+export function coercePlannerToolAliases(input: unknown): unknown {
+  if (!input || typeof input !== "object" || Array.isArray(input)) return input;
+  const raw = { ...(input as Record<string, unknown>) };
+  if (typeof raw.tool === "string") {
+    const mapped = TOOL_ALIASES[raw.tool] ?? TOOL_ALIASES[raw.tool.toUpperCase()];
+    if (mapped) raw.tool = mapped;
+  }
+  // Conversation-only path must never execute tools
+  if (raw.intent === "CONVERSATION" || raw.intent === "GUIDE") {
+    raw.tool = "RESPOND";
+  }
+  return raw;
+}
+
 export function parsePlannerResult(raw: string):
   | { ok: true; plan: PlannerResult }
   | { ok: false; message: string } {
@@ -62,7 +100,7 @@ export function parsePlannerResult(raw: string):
   } catch {
     return { ok: false, message: "Planner returned invalid JSON" };
   }
-  const result = PlannerResultSchema.safeParse(parsed);
+  const result = PlannerResultSchema.safeParse(coercePlannerToolAliases(parsed));
   if (!result.success) {
     return {
       ok: false,
