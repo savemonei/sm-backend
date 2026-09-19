@@ -1,7 +1,7 @@
 {
-  "version": 2,
+  "version": 3,
   "minAppVersion": "1.0.0",
-  "updatedAt": "2026-08-29T00:00:00.000Z",
+  "updatedAt": "2026-09-19T00:00:00.000Z",
   "defaults": {
     "enabledTypes": [
       "credit_card_due",
@@ -26,7 +26,8 @@
     {
       "id": "txn_review",
       "actions": [
-        { "id": "review", "title": "Review", "opensApp": true }
+        { "id": "review", "title": "Review", "opensApp": true },
+        { "id": "confirm_matched", "title": "Confirm matched", "opensApp": true }
       ]
     },
     {
@@ -114,14 +115,19 @@
       "hourLocal": 21,
       "minuteLocal": 0,
       "categoryId": "txn_review",
-      "title": "Review your transactions",
-      "body": "{{countLabel}}",
+      "title": "Evening summary · pending transactions",
+      "body": "{{countLabel}} · {{amountSummary}}",
       "deepLink": "savemonei://pending_review",
       "actions": [
         {
           "id": "review",
           "title": "Review",
           "deepLink": "savemonei://pending_review"
+        },
+        {
+          "id": "confirm_matched",
+          "title": "Confirm matched",
+          "deepLink": "savemonei://pending_review?action=confirm_matched"
         }
       ]
     },
